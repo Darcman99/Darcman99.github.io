@@ -1,0 +1,475 @@
+<html>
+	<head>
+            <link href="Images/icon.png" rel="icon">
+            <link href="" id="stylesheet" rel="stylesheet" type="text/css">
+            <script src="scriptsheet.js"></script>
+		<title>
+			Home
+		</title>
+	</head>
+	<body onContextMenu="return false" onload="cycle()">
+		<table>
+                  <tr>
+                        <td class="structuretd" colspan="3">
+                              <div class="timecontainer">
+                                    <div id="time">
+                                    </div>
+                                    <div id="ampm">
+                                    </div>
+                              </div>
+                              <div id="date">
+                              </div>
+                        </td>
+                  </tr>
+			<tr>
+				<th class="structureth">
+      				<input id="bookmarkssearch" onKeyUp="searchb()" placeholder="Search bookmarks.." spellcheck="false" type="text">
+      				<ul class="realignment" id="bookmarks">
+      					<li>
+      						<a href="https://123moviesfull.org" target="_blank">
+      							|123Movies|
+      						</a>
+      					</li>
+      					<li>
+      						<a href="http://www.citethisforme.com" target="_blank">
+      							|CiteThisForMe|
+      						</a>
+      					</li>
+      					<li>
+      						<a href="https://classroom.google.com" target="_blank">
+      							|Classroom|
+      						</a>
+      					</li>
+                                    <li>
+                                          <a href="https://codepen.io" target="_blank">
+                                                |CodePen|
+                                          </a>
+                                    </li>
+                                    <li>
+                                          <a href="https://www.colorhexa.com" target="_blank">
+                                                |ColorHexa|
+                                          </a>
+                                    </li>
+      					<li>
+      						<a href="https://coolors.co" target="_blank">
+      							|Coolors|
+      						</a>
+      					</li>
+                                    <li>
+                                          <a href="https://daymap.modburyhs.sa.edu.au/daymap/student/dayplan.aspx" target="_blank">
+                                                |DayPlan|
+                                          </a>
+                                    </li>
+                                    <li>
+                                          <a href="https://devrant.com" target="_blank">
+                                                |Devrant|
+                                          </a>
+                                    </li>
+      					<li>
+      						<a href="https://discordapp.com" target="_blank">
+      							|Discord|
+      						</a>
+      					</li>
+                                    <li>
+                                          <a href="https://docs.google.com" target="_blank">
+                                                |Docs|
+                                          </a>
+                                    </li>
+                                    <li>
+                                          <a href="https://endless-sky.github.io" target="_blank">
+                                                |EndlessSky|
+                                          </a>
+                                    </li>
+      					<li>
+      						<a href="https://facebook.com" target="_blank">
+      							|Facebook|
+      						</a>
+      					</li>
+      					<li>
+      						<a href="https://github.com" target="_blank">
+      							|GitHub|
+      						</a>
+      					</li>
+      					<li>
+      						<a href="https://www.gmail.com" target="_blank">
+      							|Gmail|
+      						</a>
+      					</li>
+                                    <li>
+                                          <a href="https://gomo.to" target="_blank">
+                                                |Gomo|
+                                          </a>
+                                    </li>
+      					<li>
+      						<a href="https://www.nab.com.au" target="_blank">
+      							|NAB|
+      						</a>
+      					</li>
+      					<li>
+      						<a href="http://store.steampowered.com" target="_blank">
+      							|Steam|
+      						</a>
+      					</li>
+                                    <li>
+                                          <a href="https://trello.com" target="_blank">
+                                                |Trello|
+                                          </a>
+                                    </li>
+                                    <li>
+                                          <a href="https://www.w3schools.com" target="_blank">
+                                                |W3Schools|
+                                          </a>
+                                    </li>
+                                    <li>
+                                          <a href="https://www.wikipedia.org" target="_blank">
+                                                |Wikipedia|
+                                          </a>
+                                    </li>
+      					<li>
+      						<a href="https://www.youtube.com" target="_blank">
+      							|Youtube|
+      						</a>
+      					</li>
+      				</ul>
+                        </th>
+                        <th class="structureth">
+                              <input id="toolssearch" onKeyUp="searcht()" placeholder="Search Tools.." spellcheck="false" type="text">
+                              <ul class="realignment" id="tools">
+                                    <li>
+                                          <a href="#" onclick="dialogb()">
+                                                |BinaryConverter|
+                                          </a>
+                                    </li>
+                                    <li>
+                                          <a href="#" onclick="dialogc()">
+                                                |Calculator|
+                                          </a>
+                                    </li>
+                                    <li>
+                                          <a href="#" onclick="dialogq()">
+                                                |QuickMaths|
+                                          </a>
+                                    </li>
+                                    <li>
+                                          <a href="#" onclick="dialogte()">
+                                                |TemperatureConverter|
+                                          </a>
+                                    </li>
+                                    <li>
+                                          <a href="#" onclick="dialogtimec()">
+                                                |TimeConverter|
+                                          </a>
+                                    </li>
+                                    <li>
+                                          <a href="#" onclick="dialogtimet()">
+                                                |Timetable|
+                                          </a>
+                                    </li>
+                              </ul>
+				</th>
+			</tr>
+		</table>
+            <dialog id="dialogb">
+                  <form>
+                        <input class="toolinput" name="decimal" onKeyUp="convertbinad(this.form)" placeholder="Decimal.." type="number">
+                        <br>
+                        <input class="toolinput" name="binary" onKeyUp="convertbinab(this.form)" placeholder="Binary.." type="number">
+                  </form>
+            </dialog>
+            <dialog id="dialogc">
+                  <form>
+                        <input class="toolinput" name="problem" onKeyUp="calculate(this.form)" placeholder="Problem.." type="text">
+                        <br>
+                        <input class="toolinput" readonly name="answer" placeholder="Answer.." type="number">
+                  </form>
+            </dialog>
+            <dialog id="dialogq">
+                  <div>
+                        Addition
+                        <br>
+                        <input class="toolinput" id="problem2" placeholder="Problem.." readonly type="text">
+                        <br>
+                        <input class="toolinput" id="answer2" onClick="begina()" onKeyUp="checka()" placeholder="Answer.." type="number">
+                        <br>
+                        <input class="toolinput" id="questionsanswered" readonly placeholder="Questions answered.." type="number">
+                        <br>
+                        <input class="toolinput" id="timetaken" readonly placeholder="Time taken.." type="number">
+                  </div>
+                  <br>
+                  <div>
+                        Subtraction
+                        <br>
+                        <input class="toolinput" id="problem3" placeholder="Problem.." readonly type="text">
+                        <br>
+                        <input class="toolinput" id="answer3" onClick="begins()" onKeyUp="checks()" placeholder="Answer.." type="number">
+                  </div>
+            </dialog>
+            <dialog id="dialogte">
+                  <form>
+                        <input class="toolinput" name="celsius" onKeyUp=converttempc(this.form) placeholder="Celsius.." type="number">
+                        &#176;C
+                        <br>
+                        <input class="toolinput" name="fahrenheit" onKeyUp=converttempf(this.form) placeholder="Fahrenheit.." type="number">
+                        &#176;F
+                        <br>
+                        <input class="toolinput" name="kelvin" onKeyUp="converttempk(this.form)" placeholder="Kelvin.." type="number">
+                        K
+                        <br>
+                        <input class="toolinput" name="rankine" onKeyUp="converttempra(this.form)" placeholder="Rankine.." type="number">
+                        &#176;R
+                        <br>
+                        <input class="toolinput" name="delisle" onKeyUp="converttempd(this.form)" placeholder="Delisle.." type="number">
+                        &#176;De
+                        <br>
+                        <input class="toolinput" name="newton" onKeyUp="converttempn(this.form)" placeholder="Newton.." type="number">
+                        &#176;N
+                        <br>
+                        <input class="toolinput" name="reaumur" onKeyUp="converttempre(this.form)" placeholder="R&eacute;aumur..." type="number">
+                        &#176;Ré
+                        <br>
+                        <input class="toolinput" name="romer" onKeyUp="converttempro(this.form)" placeholder="R&oslash;mer.." type="number">
+                        &#176;Rø
+                  </form>
+            </dialog>
+            <dialog id="dialogtimec">
+                  <form>
+                        <input class="toolinput" name="picosecond" onKeyUp="converttimep(this.form)" placeholder="Picoseconds.." type="number">
+                        Picoseconds
+                        <br>
+                        <input class="toolinput" name="nanosecond" onKeyUp="converttimen(this.form)" placeholder="Nanoseconds.." type="number">
+                        Nanoseconds
+                        <br>
+                        <input class="toolinput" name="microsecond" onKeyUp="converttimemic(this.form)" placeholder="Microseconds.." type="number">
+                        Microseconds
+                        <br>
+                        <input class="toolinput" name="millisecond" onKeyUp="converttimemil(this.form)" placeholder="Milliseconds.." type="number">
+                        Milliseconds
+                        <br>
+                        <input class="toolinput" name="second" onKeyUp="converttimes(this.form)" placeholder="Seconds.." type="number">
+                        Seconds
+                        <br>
+                        <input class="toolinput" name="minute" onKeyUp="converttimemin(this.form)" placeholder="Minutes.." type="number">
+                        Minutes
+                        <br>
+                        <input class="toolinput" name="hour" onKeyUp="converttimeh(this.form)" placeholder="Hours.." type="number">
+                        Hours
+                        <br>
+                        <input class="toolinput" name="day" onKeyUp="converttimed(this.form)" placeholder="Days.." type="number">
+                        Days
+                        <br>
+                        <input class="toolinput" name="week" onKeyUp="converttimew(this.form)" placeholder="Weeks.." type="number">
+                        Weeks
+                        <br>
+                        <input class="toolinput" name="month" onKeyUp="converttimemo(this.form)" placeholder="Months.." type="number">
+                        Months
+                        <br>
+                        <input class="toolinput" name="year" onKeyUp="converttimey(this.form)" placeholder="Years.." type="number">
+                        Years
+                  </form>
+            </dialog>
+            <dialog id="dialogtimet">
+                  <table>
+                        <tr>
+                              <th class="timetable">
+                              </th>
+                              <th class="timetable">
+                                    <span class="time">
+                                          Monday
+                                    </span>
+                              </th>
+                              <th class="timetable">
+                                    <span class="time">
+                                          Tuesday
+                                    </span>
+                              </th>
+                              <th class="timetable">
+                                    <span class="time">
+                                          Wednesday
+                                    </span>
+                              </th>
+                              <th class="timetable">
+                                    <span class="time">
+                                          Thursday
+                                    </span>
+                              </th>
+                              <th class="timetable">
+                                    <span class="time">
+                                          Friday
+                                    </span>
+                              </th>
+                        </tr>
+                        <tr>
+                              <th class="timetable">
+                                    <span class="time">
+                                          8:45am to 9:00am
+                                    </span>
+                                    <br>
+                                    Home Group
+                              </th>
+                              <th class="timetable">
+                                    Home Group
+                              </th>
+                              <th class="timetable">
+                                    Home Group
+                              </th>
+                              <th class="timetable">
+                              </th>
+                              <th class="timetable">
+                                    Home Group
+                              </th>
+                              <th class="timetable">
+                              </th>
+                        </tr>
+                        <tr>
+                              <th class="timetable">
+                                    <span class="time">
+                                          9:00am to 9:55am
+                                    </span>
+                                    <br>
+                                    Lesson 1
+                              </th>
+                              <th class="timetable">
+                              </th>
+                              <th class="timetable">
+                                    Woodwork
+                              </th>
+                              <th class="timetable">
+                              </th>
+                              <th class="timetable">
+                                    Information Processing
+                              </th>
+                              <th class="timetable">
+                              </th>
+                        </tr>
+                        <tr>
+                              <th class="timetable">
+                                    <span class="time">
+                                          9:55am to 10:45am
+                                    </span>
+                                    <br>
+                                    Lesson 2
+                              </th>
+                              <th class="timetable">
+                                    Information Processing
+                              </th>
+                              <th class="timetable">
+                                    Woodwork
+                              </th>
+                              <th class="timetable">
+                                    Visual Art
+                              </th>
+                              <th class="timetable">
+                                    Information Processing
+                              </th>
+                              <th class="timetable">
+                              </th>
+                        </tr>
+                        <tr>
+                              <th>
+                                    <span class="time">
+                                          10:45am to 11:02am
+                                    </span>
+                                    <br>
+                                    Recess
+                              </th>
+                        </tr>
+                        <tr>
+                              <th class="timetable">
+                                    <span class="time">
+                                          11:05am to 12:00am
+                                    </span>
+                                    <br>
+                                    Lesson 3
+                              </th>
+                              <th class="timetable">
+                                    Class Teacher
+                              </th>
+                              <th class="timetable">
+                              </th>
+                              <th class="timetable">
+                                    Information technology
+                              </th>
+                              <th class="timetable">
+                                    Visual Art
+                              </th>
+                              <th class="timetable">
+                                    Woodwork
+                              </th>
+                        </tr>
+                        <tr>
+                              <th class="timetable">
+                                    <span class="time">
+                                          12:00pm to 12:50pm
+                                    </span>
+                                    <br>
+                                    Lesson 4
+                              </th>
+                              <th class="timetable">
+                                    Information Technology
+                              </th>
+                              <th class="timetable">
+                              </th>
+                              <th class="timetable">
+                                    Information Technology
+                              </th>
+                              <th class="timetable">
+                                    Visual Art
+                              </th>
+                              <th class="timetable">
+                              </th>
+                        </tr>
+                        <tr>
+                              <th>
+                                    <span class="time">
+                                          12:50pm to 1:32pm
+                                    </span>
+                                    <br>
+                                    Lunch
+                              </th>
+                        </tr>
+                        <tr>
+                              <th class="timetable">
+                                    <span class="time">
+                                          1:35pm to 2:30pm
+                                    </span>
+                                    <br>
+                                    Lesson 5
+                              </th>
+                              <th class="timetable">
+                              </th>
+                              <th class="timetable">
+                              </th>
+                              <th class="timetable">
+                                    Information Processing
+                              </th>
+                              <th class="timetable">
+                              </th>
+                              <th class="timetable">
+                              </th>
+                        </tr>
+                        <tr>
+                              <th class="timetable">
+                                    <span class="time">
+                                          2:30pm to 3:20pm
+                                    </span>
+                                    <br>
+                                    Lesson 6
+                              </th>
+                              <th class="timetable">
+                              </th>
+                              <th class="timetable">
+                                    Visual Art
+                              </th>
+                              <th class="timetable">
+                                    Woodwork
+                              </th>
+                              <th class="timetable">
+                              </th>
+                              <th class="timetable">
+                                    Information Technology
+                              </th>
+                        </tr>
+                  </table>
+            </dialog>
+	</body>
+</html>
