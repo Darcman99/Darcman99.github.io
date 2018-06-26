@@ -1,12 +1,12 @@
 #ampm{display:inline-block;font-family:Verdana;font-size:48px;}
 #bookmarkssearch{background-color:rgba(0,0,0,0);border:0;font-size:24px;padding:12px 20px 12px 40px;width:100%;}
-#date{font-family:Verdana;font-size:48px;margin-left:70px;margin-top:720px;position:absolute;}
+#date{font-family:Verdana;font-size:48px;margin-left:12vw;margin-top:-12px;}
 #time{display:inline-block;font-family:Verdana;font-size:84px;}
 #toolssearch{background-color:rgba(0,0,0,0);border:0;font-size:24px;padding:12px 20px 12px 40px;width:100%;}
 .realignment{left:-21px;position:relative;}
-.structuretd{height:105vh;vertical-align:top;}
-.structureth{vertical-align:top;width:50vw;}
-.timecontainer{margin-left:60px;margin-top:640px;position:absolute;}
+.structuretd{height:97vh;vertical-align:bottom;}
+.structureth{padding-top:10vh;vertical-align:top;}
+.timecontainer{margin-left:4vw;}
 .timetable{width:200px;}
 .toolinput{background-color:rgba(0,0,0,0);border:0;font-size:20px;width:400px;}
 ::-webkit-scrollbar{display:none;}
