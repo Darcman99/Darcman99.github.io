@@ -1,25 +1,13 @@
-#ampm{color:#e84632;display:inline-block;font-family:Verdana;font-size:48px;}
-#bookmarkssearch{background-color:rgba(0,0,0,0);border:0;color:#f6803c;font-size:24px;padding:12px 20px 12px 40px;width:100%;}
-#date{color:#e84632;font-family:Verdana;font-size:48px;margin-left:70px;margin-top:720px;position:absolute;}
-#time{color:#e84632;display:inline-block;font-family:Verdana;font-size:84px;}
-#toolssearch{background-color:rgba(0,0,0,0);border:0;color:#f6803c;font-size:24px;padding:12px 20px 12px 40px;width:100%;}
-.realignment{left:-21px;position:relative;}
-.structuretd{height:105vh;vertical-align:top;}
-.structureth{vertical-align:top;width:50vw;}
-.timecontainer{margin-left:60px;margin-top:640px;position:absolute;}
-.timetable{width:200px;}
+#ampm{color:#e84632;}
+#bookmarkssearch{color:#f6803c;}
+#date{color:#e84632;}
+#time{color:#e84632;}
+#toolssearch{color:#f6803c;}
 .time{color:#c32c3b;}
-.toolinput{background-color:rgba(0,0,0,0);border:0;color:#f6803c;font-size:20px;width:400px;}
-::-webkit-scrollbar{display:none;}
+.toolinput{color:#f6803c;}
 ::placeholder{color:#c32c3b;}
-a,div,input,li,table,td,th,tr,ul{outline:0px;user-select:none;}
 a:hover{color:#f6803c;}
-a{color:#c32c3b;font-size:24px;letter-spacing:3px;text-decoration:none;}
-body{-webkit-font-smoothing:antialiased;background-color:#2e112d;background-image:url(Images/firewatch_day.jpg);background-repeat:no-repeat;background-size:100vw;font-family:arial,sans-serif;margin:0px;}
-dialog{background-color:rgba(0,0,0,.7);border:0px;color:#f6803c;position:fixed;}
-hr{display:inline-block;width:auto;}
-img{height:32vh;}
-input::-webkit-inner-spin-button{display:none;margin:0;}
-li{display:inline;list-style-type:none;}
-table{border-spacing:0;width:100%;}
+a{color:#c32c3b;}
+body{background-color:#2e112d;background-image:url(Images/firewatch_day.jpg);}
+dialog{color:#f6803c;}
 th{color:#f6803c;}
