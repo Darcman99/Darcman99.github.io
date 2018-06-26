@@ -12,7 +12,7 @@
 ::-webkit-scrollbar{display:none;}
 a,div,input,li,table,td,th,tr,ul{outline:0px;user-select:none;}
 a{font-size:24px;letter-spacing:3px;text-decoration:none;}
-body{-webkit-font-smoothing:antialiased;background-repeat:no-repeat;background-size:100vw;font-family:arial,sans-serif;margin:0px;}
+body{-webkit-font-smoothing:antialiased;background-repeat:no-repeat;background-size:100vw;color:#000;font-family:arial,sans-serif;margin:0px;}
 dialog{background-color:rgba(0,0,0,.7);border:0px;position:fixed;}
 hr{display:inline-block;width:auto;}
 img{height:32vh;}
