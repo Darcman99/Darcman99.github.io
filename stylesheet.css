@@ -1,6 +1,7 @@
 #ampm{display:inline-block;font-family:Verdana;font-size:48px;}
 #bookmarkssearch{background-color:rgba(0,0,0,0);border:0;font-size:24px;padding:12px 20px 12px 40px;width:100%;}
 #date{font-family:Verdana;font-size:48px;margin-left:8vw;margin-top:-12px;}
+#seconds{display:none;font-family:Verdana;font-size:84px;}
 #time{display:inline-block;font-family:Verdana;font-size:84px;}
 #toolssearch{background-color:rgba(0,0,0,0);border:0;font-size:24px;padding:12px 20px 12px 40px;width:100%;}
 .realignment{left:-21px;position:relative;}
