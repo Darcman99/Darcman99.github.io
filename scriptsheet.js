@@ -1,6 +1,12 @@
 function begina(){document.getElementById("problem2").value=Math.floor(Math.random()*(9-0+1+0))+"+"+Math.floor(Math.random()*(9-0+1+0));}
+function begind(){document.getElementById("problem5").value=Math.floor(Math.random()*(9-0+1+0))+"/"+Math.floor(Math.random()*(9-0+1+0));}
+function beginm(){document.getElementById("problem4").value=Math.floor(Math.random()*(9-0+1+0))+"*"+Math.floor(Math.random()*(9-0+1+0));}
+function begins(){document.getElementById("problem3").value=Math.floor(Math.random()*(9-0+1+0))+"-"+Math.floor(Math.random()*(9-0+1+0));}
 function calculate(form){form.answer.value=eval(form.problem.value);}
 function checka(){if(document.getElementById("answer2").value==eval(document.getElementById("problem2").value)){begina();document.getElementById("answer2").value="";document.getElementById("questionsanswered").stepUp(1);}}
+function checkd(){if(document.getElementById("answer5").value==eval(document.getElementById("problem5").value)){begind();document.getElementById("answer5").value="";document.getElementById("questionsanswered4").stepUp(1);}}
+function checkm(){if(document.getElementById("answer4").value==eval(document.getElementById("problem4").value)){beginm();document.getElementById("answer4").value="";document.getElementById("questionsanswered3").stepUp(1);}}
+function checks(){if(document.getElementById("answer3").value==eval(document.getElementById("problem3").value)){begins();document.getElementById("answer3").value="";document.getElementById("questionsanswered2").stepUp(1);}}
 function convertbinab(form){form.decimal.value=parseInt(eval(form.binary.value),2).toString(10);}
 function convertbinad(form){form.binary.value=(eval(form.decimal.value)>>>0).toString(2);}
 function converttempc(form){form.fahrenheit.value=eval(form.celsius.value)*(9/5)+32;form.kelvin.value=eval(form.celsius.value)+273.15;form.rankine.value=(eval(form.celsius.value)+273.15)*(9/5);form.delisle.value=(100-eval(form.celsius.value))*(3/2);form.newton.value=eval(form.celsius.value)*(33/100);form.reaumur.value=eval(form.celsius.value)*(4/5);form.romer.value=eval(form.celsius.value)*(21/40)+7.5;}
@@ -34,7 +40,7 @@ function dialogtimet(){document.getElementById("dialogtimet").showModal();}
 function searchb(){var input,filter,ul,li,a,i;input=document.getElementById("bookmarkssearch");filter=input.value.toUpperCase();ul=document.getElementById("bookmarks");li=ul.getElementsByTagName("li");for(i=0;i<li.length;i++){a=li[i].getElementsByTagName("a")[0];if(a.innerHTML.toUpperCase().indexOf(filter)>-1){li[i].style.display="";}else{li[i].style.display="none";}}}
 function searcht(){var input,filter,ul,li,a,i;input=document.getElementById("toolssearch");filter=input.value.toUpperCase();ul=document.getElementById("tools");li=ul.getElementsByTagName("li");for(i=0;i<li.length;i++){a=li[i].getElementsByTagName("a")[0];if(a.innerHTML.toUpperCase().indexOf(filter)>-1){li[i].style.display="";}else{li[i].style.display="none";}}}
 function time(){var time=new Date();var hours=time.getHours();var halfhours=hours;var minutes=time.getMinutes();var seconds=time.getSeconds();if(halfhours>12){halfhours=hours-12;}else if(hours===0){halfhours=12;}if(minutes<10){minutes="0"+minutes;}else{minutes=minutes;};if(seconds<10){seconds="0"+seconds;}else{minutes=minutes;};document.getElementById("time").innerHTML=halfhours+":"+minutes;document.getElementById("seconds").innerHTML=":"+seconds;if(hours<12){document.getElementById("ampm").innerHTML="AM";}else{document.getElementById("ampm").innerHTML="PM";};}
+function toggleseconds(){if(document.getElementById("seconds").style.display==="none"){document.getElementById("seconds").style.display="inline-block";}else{document.getElementById("seconds").style.display="none";}}
 setInterval('cycle()',1000);
 setInterval('date()',1000);
 setInterval('time()',1000);
-function toggleseconds(){if(document.getElementById("seconds").style.display==="none"){document.getElementById("seconds").style.display="inline-block";}else{document.getElementById("seconds").style.display="none";}}
