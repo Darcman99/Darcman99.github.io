@@ -1,22 +1,21 @@
-#ampm{display:inline-block;font-family:Verdana;font-size:48px;}
-#bookmarkssearch{background-color:rgba(0,0,0,0);border:0;font-size:24px;padding:12px 20px 12px 40px;width:100%;}
-#date{font-family:Verdana;font-size:48px;margin-left:8vw;margin-top:-12px;}
-#seconds{display:none;font-family:Verdana;font-size:84px;}
-#time{display:inline-block;font-family:Verdana;font-size:84px;}
-#toolssearch{background-color:rgba(0,0,0,0);border:0;font-size:24px;padding:12px 20px 12px 40px;width:100%;}
+#ampm{display:inline-block;font-family:Verdana;font-size:4vw;}
+#bookmarkssearch,#toolssearch{background-color:rgba(0,0,0,0);border:0;font-size:2vw;padding:1vw 2vw 1vw 4vw;width:50vw}
+#date{font-family:Verdana;font-size:4vw;margin-bottom:1vw;margin-left:8vw;}
+#seconds{display:none;font-family:Verdana;font-size:6vw;}
+#time{display:inline-block;font-family:Verdana;font-size:6vw;}
 .realignment{left:-21px;position:relative;}
-.structuretd{height:97vh;vertical-align:bottom;}
+.structuretd{height:100vh;vertical-align:bottom;}
 .structureth{padding-top:6vh;vertical-align:top;}
 .timecontainer{margin-left:4vw;}
-.timetable{width:200px;}
-.toolinput{background-color:rgba(0,0,0,0);border:0;font-size:20px;width:400px;}
+.timetable{font-size:1.2vw;width:15vw;}
+.toolinput{background-color:rgba(0,0,0,0);border:0;font-size:2vw;width:60vw;}
 ::-webkit-scrollbar{display:none;}
 a,div,input,li,table,td,th,tr,ul{outline:0px;user-select:none;}
-a{font-size:24px;letter-spacing:3px;text-decoration:none;}
-body{-webkit-font-smoothing:antialiased;background-repeat:no-repeat;background-size:100vw;font-family:arial,sans-serif;margin:0px;}
-dialog{background-color:rgba(0,0,0,.7);border:0px;position:fixed;}
+a{font-size:2vw;letter-spacing:3px;text-decoration:none;}
+body{-webkit-font-smoothing:antialiased;background-repeat:no-repeat;background-size:100vw;font-family:arial,sans-serif;margin:0;}
+dialog{background-color:rgba(0,0,0,.7);border:0;position:fixed;}
+form{font-size:2vw;}
 hr{display:inline-block;width:auto;}
-img{height:32vh;}
 input::-webkit-inner-spin-button{display:none;margin:0;}
 li{display:inline;list-style-type:none;}
 table{border-spacing:0;width:100%;}
