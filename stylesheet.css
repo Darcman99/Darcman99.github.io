@@ -3,6 +3,8 @@
 #date{font-family:Verdana;font-size:4vw;margin-bottom:2vw;margin-left:8vw;margin-top:-1vw;}
 #seconds{display:none;font-family:Verdana;font-size:6vw;}
 #time{display:inline-block;font-family:Verdana;font-size:6vw;}
+.daytheme{background-image:url(Images/firewatch_day.jpg);}
+.nighttheme{background-image:url(Images/firewatch_night.jpg);}
 .realignment{left:-21px;position:relative;}
 .structuretd{height:100vh;vertical-align:bottom;}
 .structureth{padding-top:4vh;vertical-align:top;}
@@ -10,12 +12,13 @@
 .timetable{font-size:1.2vw;width:15vw;}
 .toolinput{background-color:rgba(0,0,0,0);border:0;font-size:2vw;width:60vw;}
 ::-webkit-scrollbar{display:none;}
-a,div,input,li,table,td,th,tr,ul{outline:0px;user-select:none;}
+a,dialog,div,input,li,table,td,th,tr,ul{outline:0px;user-select:none;}
 a{font-size:2vw;letter-spacing:3px;text-decoration:none;}
 body{-webkit-font-smoothing:antialiased;background-repeat:no-repeat;background-size:100vw;font-family:arial,sans-serif;font-size:1.5vw;margin:0;}
 dialog{background-color:rgba(0,0,0,.7);border:0;position:fixed;}
 form{font-size:2vw;}
 hr{display:inline-block;width:auto;}
 input::-webkit-inner-spin-button{display:none;margin:0;}
+input[type="button"]{background-size:100% 100%;border:2px solid rgba(255,255,255,.8);border-radius:1vw;color:rgba(255,255,255,.6);font-size:2vw;font-weight:bold;}
 li{display:inline;list-style-type:none;}
 table{border-spacing:0;width:100%;}
