@@ -1,14 +1,14 @@
 <html>
 	<head>
-            <link href="" id="daynight" rel="stylesheet" type="text/css">
             <link href="Images/icon.png" rel="icon">
             <link href="stylesheet.css" rel="stylesheet" type="text/css">
+            <link href="stylesheet_day.css" id="daynight" rel="stylesheet" type="text/css">
             <script src="scriptsheet.js"></script>
 		<title>
 			Home
 		</title>
 	</head>
-	<body onContextMenu="return false" onload="cycle()">
+	<body onContextMenu="return false">
 		<table>
                   <tr>
                         <td class="structuretd" colspan="3">
@@ -159,6 +159,11 @@
                                           </a>
                                     </li>
                                     <li>
+                                          <a href="#" onclick="dialogth()">
+                                                |Themes|
+                                          </a>
+                                    </li>
+                                    <li>
                                           <a href="#" onclick="dialogtimec()">
                                                 |TimeConverter|
                                           </a>
@@ -252,6 +257,11 @@
                         <br>
                         <input class="toolinput" name="romer" onKeyUp="converttempro(this.form)" placeholder="R&oslash;mer.." type="number">
                         &#176;Rø
+                  </form>
+            </dialog>
+            <dialog id="dialogth">
+                  <form>
+                        <input onClick="nighttheme()" type="button" value="Night">
                   </form>
             </dialog>
             <dialog id="dialogtimec">
