@@ -1,5 +1,6 @@
 function bookmarks(){document.getElementById("content").src="bookmarks.html";}
 function contact(){document.getElementById("content").src="contact.html";}
+function downloads(){document.getElementById("content").src="downloads.html";}
 function date(){var date=new Date();var day=date.getDate();if(day==1){suffix="st";}else if(day==2){suffix="nd";}else if(day==3){suffix="rd";}else if(day>3){suffix="th";};var months=["January","February","March","April","May","June","July","August","September","October","November","December"];document.getElementById("date").innerHTML=months[date.getMonth()]+"&nbsp;"+day+suffix+",&nbsp;"+date.getFullYear();}
 function delay(){setTimeout(time(),1);}
 function refresh(){document.getElementById("content").src="";}
