@@ -1,8 +1,8 @@
-function bookmarks(){document.getElementById("content").src="bookmarks.html";document.getElementById("content").classList.add("fade");setTimeout(removefade,10000);}
-function contact(){document.getElementById("content").src="contact.html";document.getElementById("content").classList.add("fade");setTimeout(removefade,10000);}
+function bookmarks(){document.getElementById("content").src="bookmarks.html";document.getElementById("content").classList.add("fade");setTimeout(removefade,5000);}
+function contact(){document.getElementById("content").src="contact.html";document.getElementById("content").classList.add("fade");setTimeout(removefade,5000);}
 function date(){var date=new Date();var day=date.getDate();if(day==1){suffix="st";}else if(day==2){suffix="nd";}else if(day==3){suffix="rd";}else if(day>3){suffix="th";};var months=["January","February","March","April","May","June","July","August","September","October","November","December"];document.getElementById("date").innerHTML=months[date.getMonth()]+"&nbsp;"+day+suffix+",&nbsp;"+date.getFullYear();}
 function delay(){setTimeout(time,1);}
-function downloads(){document.getElementById("content").src="downloads.html";document.getElementById("content").classList.add("fade");setTimeout(removefade,10000);}
+function downloads(){document.getElementById("content").src="downloads.html";document.getElementById("content").classList.add("fade");setTimeout(removefade,5000);}
 function refresh(){document.getElementById("content").src="";document.getElementById("content").classList.remove("fade");}
 function removefade(){document.getElementById("content").classList.remove("fade");}
 function search(){var input,filter,ul,li,a,i;input=document.getElementById("bookmarkssearch");filter=input.value.toUpperCase();ul=document.getElementById("bookmark");li=ul.getElementsByTagName("li");for(i=0;i<li.length;i++){a=li[i].getElementsByTagName("a")[0];if(a.innerHTML.toUpperCase().indexOf(filter)>-1){li[i].style.display="";}else{li[i].style.display="none";}}}
