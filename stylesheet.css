@@ -3,7 +3,7 @@
 #time{font-size:9vw;}
 .attend{background-color:rgba(255,255,255,.2);}
 .bottom{background-color:rgba(255,255,255,.2);border-radius:0 0 25px 25px;}
-.fade{animation:fade 5s;}
+.fade{animation:fade 10s;}
 .index{animation:fadein 1s;}
 .left{text-align:right;width:30vw;}
 .right{text-align:left;width:30vw;}
@@ -13,7 +13,7 @@
 .whitespace,.main{height:30%}
 ::placeholder{color:#ddd;font-size:3vw;text-align:center;}
 @keyframes fadein{0%{opacity:0;}100%{opacity:1;}}
-@keyframes fade{0%{opacity:0;}20%{opacity:1;}60%{opacity:1;}100%{opacity:0;}}
+@keyframes fade{0%{opacity:0;}10%{opacity:1;}80%{opacity:1;}100%{opacity:0;}}
 a:hover{color:#fff;}
 a{color:#ddd;text-decoration:none;letter-spacing:3px;}
 body{-webkit-font-smoothing:antialiased;margin:0;user-select:none;font-family:'Philosopher',sans-serif;overflow:hidden;text-align:center;color:#fff;}
