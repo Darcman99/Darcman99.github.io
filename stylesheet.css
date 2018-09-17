@@ -10,7 +10,7 @@
 .timetable th{width:16%;}
 .timetable{font-size:4vh;width:95vw;border-spacing:0;height:95vh;color:#ddd;}
 .top{background-color:rgba(255,255,255,.2);border-radius:25px 25px 0 0;}
-.whitespace,.main{height:30%}
+.whitespace,.main{height:30vh}
 ::placeholder{color:#ddd;font-size:3vw;text-align:center;}
 @keyframes fadein{0%{opacity:0;}100%{opacity:1;}}
 @keyframes fade{0%{opacity:0;}10%{opacity:1;}80%{opacity:1;}100%{opacity:0;}}
@@ -24,3 +24,4 @@ li{display:inline;list-style-type:none;font-size:1.5vw;}
 table{border-spacing:0;width:100vw;height:100vh;}
 td{vertical-align:top;}
 ul{padding-left:1vw;padding-right:1vw;}
+.whitespace{text-align:left;padding-top:1vh;padding-left:2vw;font-size:3vh;}
