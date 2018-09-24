@@ -1,5 +1,5 @@
 #ampm{font-size:12vh;}
-#charge{background-image:url("assets/battery.png");background-size:100%;width:5vw;height:4vw;background-repeat:no-repeat;padding:.7vw .8vw 0 .2vw;text-align:center;font-size:1.6vw;}
+#charge{height:1vh;background-image:linear-gradient(to right,#f00,#0f0);background-size:100vw;position:absolute;left:0;top:0;}
 #date{font-size:8vh;}
 #time{font-size:16vh;}
 .attend{background-color:rgba(255,255,255,.2);}

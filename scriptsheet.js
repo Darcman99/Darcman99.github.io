@@ -89,9 +89,9 @@ function timetable(){
 	setTimeout(removefade,10000);
 }
 navigator.getBattery().then(function(battery){
-	document.getElementById("charge").innerHTML=Math.floor(battery.level*100)+"%";
+	document.getElementById("charge").style.width=(battery.level*100)+"vw";
 	battery.addEventListener('levelchange',function(){
-		document.getElementById("charge").innerHTML=Math.floor(battery.level*100)+"%";
+		document.getElementById("charge").style.width=(battery.level*100)+"vw";
 	}
 	)
 }
