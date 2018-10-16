@@ -1,2 +1,2 @@
 # Darcy.github.io
-[Check out the development roadmap!](https://trello.com/b/1j3V6HWE/websites)
+Just my personal webpage, to help me with everyday stuff.
