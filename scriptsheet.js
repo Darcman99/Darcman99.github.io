@@ -13,16 +13,16 @@ function contact(){
 function date(){
 	var date=new Date();
 	var day=date.getDate();
-	if(day==1){
+	if(day==1||day==21||day==31){
 		suffix="st";
 	}
-	else if(day==2){
+	else if(day==2||day==22){
 		suffix="nd";
 	}
-	else if(day==3){
+	else if(day==3||day==23){
 		suffix="rd";
 	}
-	else if(day>3){
+	else{
 		suffix="th";
 	}
 	var months=["January","February","March","April","May","June","July","August","September","October","November","December"];
