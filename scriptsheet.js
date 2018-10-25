@@ -1,10 +1,12 @@
 function bookmarks(){
+	clearTimeout(removefade,10000);
 	document.getElementById("content").style.display="block";
 	document.getElementById("content").src="bookmarks.html";
 	document.getElementById("content").classList.add("fade");
 	setTimeout(removefade,10000);
 }
 function contact(){
+	clearTimeout(removefade,10000);
 	document.getElementById("content").style.display="block";
 	document.getElementById("content").src="contact.html";
 	document.getElementById("content").classList.add("fade");
