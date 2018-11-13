@@ -84,15 +84,9 @@ function time(){
 	}
 	date();
 }
-function timetable(){
-	document.getElementById("content").style.display="block";
-	document.getElementById("content").src="timetable.html";
-	document.getElementById("content").classList.add("fade");
-	setTimeout(removefade,10000);
-}
 navigator.getBattery().then(function(battery){
 	document.getElementById("charge").style.width=(battery.level*100)+"vw";
-	battery.addEventListener('levelchange',function(){
+	battery.addEventListener("levelchange",function(){
 		document.getElementById("charge").style.width=(battery.level*100)+"vw";
 	}
 	)
