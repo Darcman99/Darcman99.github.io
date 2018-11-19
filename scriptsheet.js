@@ -26,6 +26,9 @@ function date(){
 function delay(){
 	setTimeout(time,1);
 }
+function refresh(){
+	location.reload();
+}
 function removefade(){
 	content.classList.remove("fade");
 	content.src="";
