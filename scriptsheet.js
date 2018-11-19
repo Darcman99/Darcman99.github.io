@@ -30,6 +30,13 @@ function removefade(){
 	content.classList.remove("fade");
 	content.src="";
 }
+function schedule(){
+	clearTimeout(removefade,10000);
+	content.classList.add("fade");
+	content.src="schedule.html";
+	content.style.display="block";
+	setTimeout(removefade,10000);
+}
 function search(){
 	var input,filter,ul,li,a,i;input=document.getElementById("bookmarkssearch");
 	ul=document.getElementById("bookmark");
