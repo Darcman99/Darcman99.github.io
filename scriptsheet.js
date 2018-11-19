@@ -1,9 +1,9 @@
 function bookmarks(){
-	clearTimeout(removefade,10000);
+	clearTimeout(removefade,30000);
 	content.classList.add("fade");
 	content.src="bookmarks.html";
 	content.style.display="block";
-	setTimeout(removefade,10000);
+	setTimeout(removefade,30000);
 }
 function date(){
 	var date=new Date();
@@ -31,11 +31,11 @@ function removefade(){
 	content.src="";
 }
 function schedule(){
-	clearTimeout(removefade,10000);
+	clearTimeout(removefade,30000);
 	content.classList.add("fade");
 	content.src="schedule.html";
 	content.style.display="block";
-	setTimeout(removefade,10000);
+	setTimeout(removefade,30000);
 }
 function search(){
 	var input,filter,ul,li,a,i;input=document.getElementById("bookmarkssearch");
