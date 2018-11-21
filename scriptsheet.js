@@ -26,12 +26,42 @@ function date(){
 function delay(){
 	setTimeout(time,1);
 }
+function loadschedule(){
+	document.getElementById("sunday").innerHTML=window.localStorage.getItem("schedulesunday");
+	document.getElementById("monday").innerHTML=window.localStorage.getItem("schedulemonday");
+	document.getElementById("tuesday").innerHTML=window.localStorage.getItem("scheduletuesday");
+	document.getElementById("wednesday").innerHTML=window.localStorage.getItem("schedulewednesday");
+	document.getElementById("thursday").innerHTML=window.localStorage.getItem("schedulethursday");
+	document.getElementById("friday").innerHTML=window.localStorage.getItem("schedulefriday");
+	document.getElementById("saturday").innerHTML=window.localStorage.getItem("schedulesaturday");
+}
 function refresh(){
 	location.reload();
 }
 function removefade(){
 	content.classList.remove("fade");
 	content.src="";
+}
+function saveschedulesunday(){
+	window.localStorage.setItem("schedulesunday",document.getElementById("sunday").innerHTML);
+}
+function saveschedulemonday(){
+	window.localStorage.setItem("schedulemonday",document.getElementById("monday").innerHTML);
+}
+function savescheduletuesday(){
+	window.localStorage.setItem("scheduletuesday",document.getElementById("tuesday").innerHTML);
+}
+function saveschedulewednesday(){
+	window.localStorage.setItem("schedulewednesday",document.getElementById("wednesday").innerHTML);
+}
+function saveschedulethursday(){
+	window.localStorage.setItem("schedulethursday",document.getElementById("thursday").innerHTML);
+}
+function saveschedulefriday(){
+	window.localStorage.setItem("schedulefriday",document.getElementById("friday").innerHTML);
+}
+function saveschedulesaturday(){
+	window.localStorage.setItem("schedulesaturday",document.getElementById("saturday").innerHTML);
 }
 function schedule(){
 	clearTimeout(removefade,30000);

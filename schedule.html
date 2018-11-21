@@ -3,66 +3,52 @@
 	<head>
 		<link rel="stylesheet" type="text/css" href="stylesheet.css">
 	</head>
-	<body>
+	<body onload="loadschedule()">
 		<table>
 			<tr>
-				<td>
+				<td class="day">
 					Sunday
 				</td>
-				<td>
+				<td class="day">
 					Monday
 				</td>
-				<td>
+				<td class="day">
 					Tuesday
 				</td>
-				<td>
+				<td class="day">
 					Wednesday
 				</td>
-				<td>
+				<td class="day">
 					Thursday
 				</td>
-				<td>
+				<td class="day">
 					Friday
 				</td>
-				<td>
+				<td class="day">
 					Saturday
 				</td>
 			</tr>
 			<tr>
 				<td>
-					<p contenteditable>
-						Free
-					</p>
+					<p contenteditable onkeyup="saveschedulesunday()" id="sunday"/>
 				</td>
 				<td>
-					<p contenteditable>
-						Free
-					</p>
+					<p contenteditable onkeyup="saveschedulemonday()" id="monday"/>
 				</td>
 				<td>
-					<p contenteditable>
-						Free
-					</p>
+					<p contenteditable onkeyup="savescheduletuesday()" id="tuesday"/>
 				</td>
 				<td>
-					<p contenteditable>
-						Free
-					</p>
+					<p contenteditable onkeyup="saveschedulewednesday()" id="wednesday"/>
 				</td>
 				<td>
-					<p contenteditable>
-						Free
-					</p>
+					<p contenteditable onkeyup="saveschedulethursday()" id="thursday"/>
 				</td>
 				<td>
-					<p contenteditable>
-						Free
-					</p>
+					<p contenteditable onkeyup="saveschedulefriday()" id="friday"/>
 				</td>
 				<td>
-					<p contenteditable>
-						Free
-					</p>
+					<p contenteditable onkeyup="saveschedulesaturday()" id="saturday"/>
 				</td>
 			</tr>
 		</table>
