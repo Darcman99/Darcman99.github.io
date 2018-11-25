@@ -1,6 +1,6 @@
-const ordinalSuffix = ['st', 'nd', 'rd'];
-const addSuffix = n => n + (ordinalSuffix[(n - 1) % 10] || 'th');
-const numberToOrdinal = n => `${n}`.match(/1\d$/) ? n + 'th' : addSuffix(n);
+const ordinalSuffix=["st","nd","rd"];
+const addSuffix=n=>n+(ordinalSuffix[(n-1)%10]||"th");
+const numberToOrdinal=n=>"${n}".match(/1\d$/)?n+"th":addSuffix(n);
 function bookmarks(){
 	clearTimeout(removefade,30000);
 	content.classList.add("fade");
