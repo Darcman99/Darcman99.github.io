@@ -1,3 +1,6 @@
+const ordinalSuffix = ['st', 'nd', 'rd'];
+const addSuffix = n => n + (ordinalSuffix[(n - 1) % 10] || 'th');
+const numberToOrdinal = n => `${n}`.match(/1\d$/) ? n + 'th' : addSuffix(n);
 function bookmarks(){
 	clearTimeout(removefade,30000);
 	content.classList.add("fade");
@@ -7,33 +10,39 @@ function bookmarks(){
 }
 function date(){
 	var date=new Date();
-	var day=date.getDate();
-	if(day==1||day==21||day==31){
-		suffix="st";
-	}
-	else if(day==2||day==22){
-		suffix="nd";
-	}
-	else if(day==3||day==23){
-		suffix="rd";
-	}
-	else{
-		suffix="th";
-	}
 	var months=["January","February","March","April","May","June","July","August","September","October","November","December"];
-	document.getElementById("date").innerHTML=months[date.getMonth()]+"&nbsp;"+day+suffix+",&nbsp;"+date.getFullYear();
-}
-function delay(){
-	setTimeout(time,1);
+	document.getElementById("date").innerHTML=months[date.getMonth()]+"&nbsp;"+numberToOrdinal(date.getDate())+",&nbsp;"+date.getFullYear();
 }
 function loadschedule(){
-	document.getElementById("sunday").innerHTML=window.localStorage.getItem("schedulesunday");
-	document.getElementById("monday").innerHTML=window.localStorage.getItem("schedulemonday");
-	document.getElementById("tuesday").innerHTML=window.localStorage.getItem("scheduletuesday");
-	document.getElementById("wednesday").innerHTML=window.localStorage.getItem("schedulewednesday");
-	document.getElementById("thursday").innerHTML=window.localStorage.getItem("schedulethursday");
-	document.getElementById("friday").innerHTML=window.localStorage.getItem("schedulefriday");
-	document.getElementById("saturday").innerHTML=window.localStorage.getItem("schedulesaturday");
+	var days=["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+	var fulldate=new Date();
+	var date=fulldate.getDate();
+	var nextday=new Date();
+	nextday.setDate(date+1);
+	var nextday2=new Date();
+	nextday2.setDate(date+2);
+	var nextday3=new Date();
+	nextday3.setDate(date+3);
+	var nextday4=new Date();
+	nextday4.setDate(date+4);
+	var nextday5=new Date();
+	nextday5.setDate(date+5);
+	var nextday6=new Date();
+	nextday6.setDate(date+6);
+	document.getElementById("currentdate").innerHTML=numberToOrdinal(date);
+	document.getElementById("currentday").innerHTML=days[fulldate.getDay()];
+	document.getElementById("date2").innerHTML=numberToOrdinal(nextday.getDate());
+	document.getElementById("date3").innerHTML=numberToOrdinal(nextday2.getDate());
+	document.getElementById("date4").innerHTML=numberToOrdinal(nextday3.getDate());
+	document.getElementById("date5").innerHTML=numberToOrdinal(nextday4.getDate());
+	document.getElementById("date6").innerHTML=numberToOrdinal(nextday5.getDate());
+	document.getElementById("date7").innerHTML=numberToOrdinal(nextday6.getDate());
+	document.getElementById("day2").innerHTML=days[nextday.getDay()];
+	document.getElementById("day3").innerHTML=days[nextday2.getDay()];
+	document.getElementById("day4").innerHTML=days[nextday3.getDay()];
+	document.getElementById("day5").innerHTML=days[nextday4.getDay()];
+	document.getElementById("day6").innerHTML=days[nextday5.getDay()];
+	document.getElementById("day7").innerHTML=days[nextday6.getDay()];
 }
 function refresh(){
 	location.reload();
@@ -41,27 +50,6 @@ function refresh(){
 function removefade(){
 	content.classList.remove("fade");
 	content.src="";
-}
-function saveschedulesunday(){
-	window.localStorage.setItem("schedulesunday",document.getElementById("sunday").innerHTML);
-}
-function saveschedulemonday(){
-	window.localStorage.setItem("schedulemonday",document.getElementById("monday").innerHTML);
-}
-function savescheduletuesday(){
-	window.localStorage.setItem("scheduletuesday",document.getElementById("tuesday").innerHTML);
-}
-function saveschedulewednesday(){
-	window.localStorage.setItem("schedulewednesday",document.getElementById("wednesday").innerHTML);
-}
-function saveschedulethursday(){
-	window.localStorage.setItem("schedulethursday",document.getElementById("thursday").innerHTML);
-}
-function saveschedulefriday(){
-	window.localStorage.setItem("schedulefriday",document.getElementById("friday").innerHTML);
-}
-function saveschedulesaturday(){
-	window.localStorage.setItem("schedulesaturday",document.getElementById("saturday").innerHTML);
 }
 function schedule(){
 	clearTimeout(removefade,30000);
@@ -120,4 +108,5 @@ navigator.getBattery().then(function(battery){
 }
 )
 setInterval(time,1000);
+time();
 var content=document.getElementById("content")
