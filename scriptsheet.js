@@ -6,6 +6,8 @@ function bookmarks(){
 	content.classList.add("fade");
 	content.src="bookmarks.html";
 	content.style.display="block";
+	contentparent.classList.add("backgroundfade");
+	main.classList.add("main");
 	setTimeout(removefade,30000);
 }
 function date(){
@@ -19,6 +21,8 @@ function refresh(){
 function removefade(){
 	content.classList.remove("fade");
 	content.src="";
+	contentparent.classList.remove("backgroundfade");
+	main.classList.remove("main");
 }
 function search(){
 	var input,filter,ul,li,a,i;input=document.getElementById("bookmarkssearch");
@@ -72,3 +76,5 @@ navigator.getBattery().then(function(battery){
 setInterval(time,1000);
 time();
 var content=document.getElementById("content")
+var contentparent=document.getElementById("contentparent")
+var main=document.getElementById("main")

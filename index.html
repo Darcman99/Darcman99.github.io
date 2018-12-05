@@ -16,11 +16,13 @@
 					</div>
 				</td>
 			</tr>
-			<tr class="main">
+			<tr>
 				<th class="left">
-					<img src="assets/bookmarks.png" onclick="bookmarks()">
+					<div class="switch">
+						<img src="assets/bookmarks.png" onclick="bookmarks()">
+					</div>
 				</th>
-				<th onclick="refresh()">
+				<th onclick="refresh()" id="main">
 					<div>
 						<span id="time">
 						</span>
@@ -35,7 +37,7 @@
 				</th>
 			</tr>
 			<tr>
-				<td colspan="3" class="content">
+				<td colspan="3" id="contentparent">
 					<iframe id="content" src=""></iframe>
 				</td>
 			</tr>
