@@ -75,6 +75,7 @@ navigator.getBattery().then(function(battery){
 )
 setInterval(time,1000);
 time();
-var content=document.getElementById("content")
-var contentparent=document.getElementById("contentparent")
-var main=document.getElementById("main")
+var background="";
+var content=document.getElementById("content");
+var contentparent=document.getElementById("contentparent");
+var main=document.getElementById("main");
