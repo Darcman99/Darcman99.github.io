@@ -26,8 +26,7 @@ function removefade(){
 }
 function search(){
 	var input,filter,ul,li,a,i;input=document.getElementById("bookmarkssearch");
-	ul=document.getElementById("bookmark");
-	li=ul.getElementsByTagName("li");
+	li=document.getElementById("bookmark").getElementsByTagName("li");
 	filter=input.value.toUpperCase();
 	for(i=0;i<li.length;i++){
 		a=li[i].getElementsByTagName("a")[0];
