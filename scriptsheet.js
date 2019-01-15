@@ -2,13 +2,11 @@ const ordinalSuffix=["st","nd","rd"];
 const addSuffix=n=>n+(ordinalSuffix[(n-1)%10]||"th");
 const numberToOrdinal=n=>"${n}".match(/1\d$/)?n+"th":addSuffix(n);
 function bookmarks(){
-	clearTimeout(removefade,30000);
 	content.classList.add("fade");
 	content.src="bookmarks.html";
 	content.style.display="block";
 	contentparent.classList.add("backgroundfade");
 	main.classList.add("main");
-	setTimeout(removefade,30000);
 }
 function date(){
 	var date=new Date();
@@ -17,12 +15,6 @@ function date(){
 }
 function refresh(){
 	location.reload();
-}
-function removefade(){
-	content.classList.remove("fade");
-	content.src="";
-	contentparent.classList.remove("backgroundfade");
-	main.classList.remove("main");
 }
 function search(){
 	var input,filter,ul,li,a,i;input=document.getElementById("bookmarkssearch");
