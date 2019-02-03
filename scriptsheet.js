@@ -1,6 +1,18 @@
 const ordinalSuffix=["st","nd","rd"];
 const addSuffix=n=>n+(ordinalSuffix[(n-1)%10]||"th");
 const numberToOrdinal=n=>"${n}".match(/1\d$/)?n+"th":addSuffix(n);
+function addlink(){
+	var title=document.getElementById("website").value;
+	if(linkname!==""){
+		var linkcontainer=document.createElement("li");
+		var link=document.createElement("a");
+		var linkname=document.createTextNode("|"+title+"| ");
+		link.appendChild(linkname);
+		link.setAttribute("href","https://"+title+".com");
+		linkcontainer.appendChild(link);
+		document.getElementById("bookmarks").appendChild(linkcontainer);
+	}
+}
 function bookmarks(){
 	content.classList.add("fade");
 	content.src="bookmarks.html";
@@ -18,7 +30,7 @@ function refresh(){
 }
 function search(){
 	var input,filter,ul,li,a,i;input=document.getElementById("bookmarkssearch");
-	li=document.getElementById("bookmark").getElementsByTagName("li");
+	li=document.getElementById("bookmarks").getElementsByTagName("li");
 	filter=input.value.toUpperCase();
 	for(i=0;i<li.length;i++){
 		a=li[i].getElementsByTagName("a")[0];
