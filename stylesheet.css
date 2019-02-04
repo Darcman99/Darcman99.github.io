@@ -20,21 +20,6 @@
 #time{
 	font-size:14vh;
 }
-#website,.addlink{
-	bottom:0;
-	font-size:2vw;
-	position:absolute;
-	width:50%;
-}
-#website::placeholder,#linkurl::placeholder{
-	font-size:2vw;
-}
-#website{
-	left:0;
-}
-.addlink{
-	left:50%;
-}
 .backgroundfade{
 	animation:backgroundfade 1s forwards;
 }
