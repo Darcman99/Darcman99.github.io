@@ -1,18 +1,6 @@
 const ordinalSuffix=["st","nd","rd"];
 const addSuffix=n=>n+(ordinalSuffix[(n-1)%10]||"th");
 const numberToOrdinal=n=>"${n}".match(/1\d$/)?n+"th":addSuffix(n);
-function addlink(){
-	var title=document.getElementById("website").value;
-	if(linkname!==""){
-		var linkcontainer=document.createElement("li");
-		var link=document.createElement("a");
-		var linkname=document.createTextNode("|"+title+"| ");
-		link.appendChild(linkname);
-		link.setAttribute("href","https://"+title+".com");
-		linkcontainer.appendChild(link);
-		document.getElementById("bookmarks").appendChild(linkcontainer);
-	}
-}
 function bookmarks(){
 	content.classList.add("fade");
 	content.src="bookmarks.html";
@@ -24,6 +12,29 @@ function date(){
 	var date=new Date();
 	var months=["January","February","March","April","May","June","July","August","September","October","November","December"];
 	document.getElementById("date").innerHTML=months[date.getMonth()]+"&nbsp;"+numberToOrdinal(date.getDate())+",&nbsp;"+date.getFullYear();
+}
+function keypress(event){
+	var code1=event.keyCode;
+	switch(code1){
+		case 49:
+		if(code2==71){
+			window.open("https://github.com","_blank");
+		}
+		break;
+		case 67:
+		window.open("https://codepen.io","_blank");
+		break;
+		case 70:
+		window.open("https://www.facebook.com","_blank");
+		break;
+		case 75:
+		window.open("https://keycode.info","_blank");
+		break;
+		case 78:
+		window.open("https://www.nab.com","_blank");
+		break;
+	}
+	code2=code1;
 }
 function refresh(){
 	location.reload();
@@ -79,6 +90,7 @@ navigator.getBattery().then(function(battery){
 setInterval(time,1000);
 time();
 var background="";
+var code2="";
 var content=document.getElementById("content");
 var contentparent=document.getElementById("contentparent");
 var main=document.getElementById("main");
