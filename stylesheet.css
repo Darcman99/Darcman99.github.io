@@ -14,17 +14,12 @@
 }
 .main{
 	background-color:rgba(0,0,0,.6);
-	border-radius:15vh;
+	border-radius:17vh;
 	height:30vh;
 	padding:2vh;
 }
 #time{
 	font-size:14vh;
-}
-.index{
-	animation:fadein 1s;
-	background-image:url(assets/background.jpg);
-	background-size:100% 100%;
 }
 .side{
 	width:30vw;
@@ -35,6 +30,9 @@
 }
 body{
 	-webkit-font-smoothing:antialiased;
+	animation:fadein 1s;
+	background-image:url(assets/background.jpg);
+	background-size:100% 100%;
 	color:#fff;
 	font-family:"Philosopher";
 	margin:0;
