@@ -16,22 +16,40 @@ function date(){
 function keypress(event){
 	var code1=event.keyCode;
 	switch(code1){
-		case 49:
-		if(code2==71){
-			window.open("https://github.com","_blank");
+		case 65:
+		if(code2==78){
+			window.open("https://www.nab.com","_blank");
 		}
 		break;
 		case 67:
 		window.open("https://codepen.io","_blank");
 		break;
+		case 69:
+		if(code2==78){
+			window.open("https://www.netflix.com/au","_blank");
+		}
+		break;
 		case 70:
 		window.open("https://www.facebook.com","_blank");
+		break;
+		case 73:
+		if(code2==71){
+			window.open("https://github.com","_blank");
+		}
 		break;
 		case 75:
 		window.open("https://keycode.info","_blank");
 		break;
-		case 78:
-		window.open("https://www.nab.com","_blank");
+		case 77:
+		if(code2==71){
+			window.open("https://www.gmail.com","_blank");
+		}
+		break;
+		case 83:
+		window.open("https://www.stan.com.au","_blank");
+		break;
+		case 89:
+		window.open("https://www.youtube.com","_blank");
 		break;
 	}
 	code2=code1;
