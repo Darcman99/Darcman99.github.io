@@ -12,14 +12,14 @@
 #date{
 	font-size:7vh;
 }
+#time{
+	font-size:14vh;
+}
 .main{
 	background-color:rgba(0,0,0,.6);
 	border-radius:17vh;
 	height:30vh;
 	padding:2vh;
-}
-#time{
-	font-size:14vh;
 }
 .side{
 	width:30vw;
