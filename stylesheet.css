@@ -12,131 +12,38 @@
 #date{
 	font-size:7vh;
 }
-#main{
+.main{
 	background-color:rgba(0,0,0,.6);
-	border-radius:10vh;
-	padding:4vh;
+	border-radius:15vh;
+	height:30vh;
+	padding:2vh;
 }
 #time{
 	font-size:14vh;
-}
-.backgroundfade{
-	animation:backgroundfade 1s forwards;
-}
-.bottom{
-	background-color:rgba(255,255,255,.2);
-	border-radius:0 0 25px 25px;
-}
-.fade{
-	animation:fade 1s forwards;
 }
 .index{
 	animation:fadein 1s;
 	background-image:url(assets/background.jpg);
 	background-size:100% 100%;
 }
-.left{
-	padding:2vw;
-	text-align:right;
+.side{
 	width:30vw;
-}
-.main{
-	animation:joinborder 1s forwards;
-}
-.right{
-	padding:2vw;
-	text-align:left;
-	width:30vw;
-}
-.switch{
-	background-color:rgba(0,0,0,.6);
-	border-radius:50%;
-	margin:2vw;
-	padding:1.5vw;
-}
-.whitespace,#main{
-	height:30vh;
-}
-.whitespace{
-	font-size:3vh;
-	padding-left:2vw;
-	padding-top:1vh;
-	text-align:left;
-}
-::placeholder{
-	color:#ddd;
-	font-size:3vw;
-	text-align:center;
-}
-@keyframes backgroundfade{
-	0%{background-color:0;}
-	100%{background-color:rgba(0,0,0,.6);}
 }
 @keyframes fadein{
 	0%{opacity:0;}
 	100%{opacity:1;}
 }
-@keyframes fade{
-	0%{opacity:0;}
-	100%{opacity:1;}
-}
-@keyframes joinborder{
-	0%{border-radius:10vh;}
-	100%{border-radius:10vh 10vh 0 0;}
-}
-a:hover{
-	color:#fff;
-}
-a{
-	color:#ddd;
-	letter-spacing:3px;
-	text-decoration:none;
-}
 body{
 	-webkit-font-smoothing:antialiased;
 	color:#fff;
-	font-family:'Philosopher';
+	font-family:"Philosopher";
 	margin:0;
 	overflow:hidden;
 	text-align:center;
 	user-select:none;
 }
-div{
-	display:inline-block;
-}
-iframe{
-	border:0;
-	height:100%;
-	opacity:0;
-	width:100%;
-}
-img{
-	height:8vh;
-	width:8vh;
-}
-input{
-	background-color:transparent;
-	border:0;
-	color:#fff;
-	font-size:3vw;
-	outline:none;
-	text-align:center;
-	width:100%;
-}
-li{
-	display:inline;
-	font-size:1.5vw;
-	list-style-type:none;
-}
-p{
-	outline:none;
-}
 table{
 	border-spacing:0;
 	height:100vh;
 	width:100vw;
-}
-ul{
-	padding-left:3vw;
-	padding-right:3vw;
 }

@@ -1,13 +1,6 @@
 const ordinalSuffix=["st","nd","rd"];
 const addSuffix=n=>n+(ordinalSuffix[(n-1)%10]||"th");
 const numberToOrdinal=n=>"${n}".match(/1\d$/)?n+"th":addSuffix(n);
-function bookmarks(){
-	content.classList.add("fade");
-	content.src="bookmarks.html";
-	content.style.display="block";
-	contentparent.classList.add("backgroundfade");
-	main.classList.add("main");
-}
 function date(){
 	var date=new Date();
 	var months=["January","February","March","April","May","June","July","August","September","October","November","December"];
@@ -54,23 +47,6 @@ function keypress(event){
 	}
 	code2=code1;
 }
-function refresh(){
-	location.reload();
-}
-function search(){
-	var input,filter,ul,li,a,i;input=document.getElementById("bookmarkssearch");
-	li=document.getElementById("bookmarks").getElementsByTagName("li");
-	filter=input.value.toUpperCase();
-	for(i=0;i<li.length;i++){
-		a=li[i].getElementsByTagName("a")[0];
-		if(a.innerHTML.toUpperCase().indexOf(filter)>-1){
-			li[i].style.display="";
-		}
-		else{
-			li[i].style.display="none";
-		}
-	}
-}
 function time(){
 	var time=new Date();
 	var minutes=time.getMinutes();
@@ -107,8 +83,4 @@ navigator.getBattery().then(function(battery){
 )
 setInterval(time,1000);
 time();
-var background="";
 var code2="";
-var content=document.getElementById("content");
-var contentparent=document.getElementById("contentparent");
-var main=document.getElementById("main");
