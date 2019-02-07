@@ -11,38 +11,50 @@ function keypress(event){
 	switch(code1){
 		case 65:
 		if(code2==78){
+			localStorage.setItem("lastvisited","https://www.nab.com");
 			window.open("https://www.nab.com","_blank");
 		}
 		break;
 		case 67:
+		localStorage.setItem("lastvisited","https://codepen.io");
 		window.open("https://codepen.io","_blank");
 		break;
 		case 69:
 		if(code2==78){
+			localStorage.setItem("lastvisited","https://www.netflix.com/au");
 			window.open("https://www.netflix.com/au","_blank");
 		}
 		break;
 		case 70:
+		localStorage.setItem("lastvisited","https://www.facebook.com");
 		window.open("https://www.facebook.com","_blank");
 		break;
 		case 73:
 		if(code2==71){
+			localStorage.setItem("lastvisited","https://github.com");
 			window.open("https://github.com","_blank");
 		}
 		break;
 		case 75:
+		localStorage.setItem("lastvisited","https://keycode.info");
 		window.open("https://keycode.info","_blank");
 		break;
 		case 77:
 		if(code2==71){
+			localStorage.setItem("lastvisited","https://www.gmail.com");
 			window.open("https://www.gmail.com","_blank");
 		}
 		break;
 		case 83:
+		localStorage.setItem("lastvisited","https://www.stan.com.au");
 		window.open("https://www.stan.com.au","_blank");
 		break;
 		case 89:
+		localStorage.setItem("lastvisited","https://www.youtube.com");
 		window.open("https://www.youtube.com","_blank");
+		break;
+		case 8:
+			window.open(localStorage.getItem("lastvisited"),"_blank");
 		break;
 	}
 	code2=code1;
