@@ -10,9 +10,11 @@ function keypress(event){
 	var code1=event.keyCode;
 	switch(code1){
 		case 65:
-		if(code2==78){
+		switch(code2){
+			case 78:
 			localStorage.setItem("lastvisited","https://www.nab.com");
 			window.open("https://www.nab.com","_blank");
+			break;
 		}
 		break;
 		case 67:
@@ -20,9 +22,11 @@ function keypress(event){
 		window.open("https://codepen.io","_blank");
 		break;
 		case 69:
-		if(code2==78){
+		switch(code2){
+			case 78:
 			localStorage.setItem("lastvisited","https://www.netflix.com/au");
 			window.open("https://www.netflix.com/au","_blank");
+			break;
 		}
 		break;
 		case 70:
@@ -30,9 +34,11 @@ function keypress(event){
 		window.open("https://www.facebook.com","_blank");
 		break;
 		case 73:
-		if(code2==71){
+		switch(code2){
+			case 71:
 			localStorage.setItem("lastvisited","https://github.com");
 			window.open("https://github.com","_blank");
+			break;
 		}
 		break;
 		case 75:
@@ -40,9 +46,11 @@ function keypress(event){
 		window.open("https://keycode.info","_blank");
 		break;
 		case 77:
-		if(code2==71){
+		switch(code2){
+			case 71:
 			localStorage.setItem("lastvisited","https://www.gmail.com");
 			window.open("https://www.gmail.com","_blank");
+			break;
 		}
 		break;
 		case 83:
