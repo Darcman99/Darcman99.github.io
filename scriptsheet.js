@@ -15,6 +15,14 @@ function keypress(event){
 			localStorage.setItem("lastvisited","https://www.nab.com");
 			window.open("https://www.nab.com","_blank");
 			break;
+			case 84:
+			switch(code3){
+				case 83:
+				localStorage.setItem("lastvisited","https://www.stan.com.au");
+				window.open("https://www.stan.com.au","_blank");
+				break;
+			}
+			break;
 		}
 		break;
 		case 67:
@@ -26,6 +34,14 @@ function keypress(event){
 			case 78:
 			localStorage.setItem("lastvisited","https://www.netflix.com/au");
 			window.open("https://www.netflix.com/au","_blank");
+			break;
+			case 84:
+			switch(code3){
+				case 83:
+				localStorage.setItem("lastvisited","https://store.steampowered.com");
+				window.open("https://store.steampowered.com","_blank");
+				break;
+			}
 			break;
 		}
 		break;
@@ -53,10 +69,6 @@ function keypress(event){
 			break;
 		}
 		break;
-		case 83:
-		localStorage.setItem("lastvisited","https://www.stan.com.au");
-		window.open("https://www.stan.com.au","_blank");
-		break;
 		case 89:
 		localStorage.setItem("lastvisited","https://www.youtube.com");
 		window.open("https://www.youtube.com","_blank");
@@ -65,6 +77,7 @@ function keypress(event){
 			window.open(localStorage.getItem("lastvisited"),"_blank");
 		break;
 	}
+	code3=code2;
 	code2=code1;
 }
 function time(){
@@ -104,3 +117,4 @@ navigator.getBattery().then(function(battery){
 setInterval(time,1000);
 time();
 var code2="";
+var code3="";
