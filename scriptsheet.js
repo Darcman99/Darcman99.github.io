@@ -70,8 +70,14 @@ function keypress(event){
 		}
 		break;
 		case 84:
-		localStorage.setItem("lastvisited","https://trello.com");
-		window.open("https://trello.com","_blank");
+		switch(code2){
+			default:
+			localStorage.setItem("lastvisited","https://trello.com");
+			window.open("https://trello.com","_blank");
+			break;
+			case 83:
+			break;
+		}
 		break;
 		case 89:
 		localStorage.setItem("lastvisited","https://www.youtube.com");
