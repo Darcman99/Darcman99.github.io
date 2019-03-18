@@ -20,9 +20,7 @@
 	border-radius:17vh;
 	height:30vh;
 	padding:2vh;
-}
-.side{
-	width:30vw;
+	width:40vw;
 }
 @keyframes fadein{
 	0%{opacity:0;}
