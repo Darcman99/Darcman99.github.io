@@ -26,11 +26,29 @@ function keypress(event){
 		}
 		break;
 		case 67:
-		localStorage.setItem("lastvisited","https://codepen.io");
-		window.open("https://codepen.io","_blank");
+		switch(code2){
+			case 65:
+			break;
+			default:
+			localStorage.setItem("lastvisited","https://codepen.io");
+			window.open("https://codepen.io","_blank");
+			break;
+		}
 		break;
 		case 69:
 		switch(code2){
+			case 67:
+			switch(code3){
+				case 65:
+				switch(code4){
+					case 70:
+					localStorage.setItem("lastvisited","https://www.facebook.com");
+					window.open("https://www.facebook.com","_blank");
+					break;
+				}
+				break;
+			}
+			break;
 			case 78:
 			localStorage.setItem("lastvisited","https://www.netflix.com/au");
 			window.open("https://www.netflix.com/au","_blank");
@@ -44,10 +62,6 @@ function keypress(event){
 			}
 			break;
 		}
-		break;
-		case 70:
-		localStorage.setItem("lastvisited","https://www.facebook.com");
-		window.open("https://www.facebook.com","_blank");
 		break;
 		case 73:
 		switch(code2){
@@ -71,11 +85,23 @@ function keypress(event){
 		break;
 		case 84:
 		switch(code2){
+			case 67:
+			switch(code3){
+				case 65:
+				switch(code4){
+					case 70:
+					localStorage.setItem("lastvisited","https://kirkmcdonald.github.io");
+					window.open("https://kirkmcdonald.github.io","_blank");
+					break;
+				}
+				break;
+			}
+			break;
+			case 83:
+			break;
 			default:
 			localStorage.setItem("lastvisited","https://trello.com");
 			window.open("https://trello.com","_blank");
-			break;
-			case 83:
 			break;
 		}
 		break;
@@ -87,6 +113,7 @@ function keypress(event){
 			window.open(localStorage.getItem("lastvisited"),"_blank");
 		break;
 	}
+	code4=code3;
 	code3=code2;
 	code2=code1;
 }
