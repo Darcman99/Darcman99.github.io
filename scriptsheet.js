@@ -9,6 +9,9 @@ function date(){
 function keypress(event){
 	var code1=event.keyCode;
 	switch(code1){
+		case 32:
+		document.getElementById("footer").classList.toggle("hidefooter");
+		break;
 		case 65:
 		switch(code2){
 			case 78:

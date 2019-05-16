@@ -22,9 +22,24 @@
 	padding:2vh;
 	width:40vw;
 }
+.hidefooter{
+	bottom:-2.5vw;
+}
 @keyframes fadein{
 	0%{opacity:0;}
 	100%{opacity:1;}
+}
+a:link{
+	color:#bbb;text-decoration:none;
+}
+a:visited{
+	color:#bbb;text-decoration:none;
+}
+a:hover{
+	color:#fff;text-decoration:none;
+}
+a:active{
+	color:#bbb;text-decoration:none;
 }
 body{
 	-webkit-font-smoothing:antialiased;
@@ -33,10 +48,18 @@ body{
 	background-size:100% 100%;
 	color:#fff;
 	font-family:"Philosopher";
+	font-size:1.5vw;
 	margin:0;
 	overflow:hidden;
 	text-align:center;
 	user-select:none;
+}
+footer{
+	bottom:0;
+	height:2.5vw;
+	position:fixed;
+	transition:.2s;
+	width:100%;
 }
 table{
 	border-spacing:0;
