@@ -42,6 +42,9 @@ a:active{
 	color:#bbb;
 }
 a{
+	font-size:1.5vw;
+	letter-spacing:.1vw;
+	margin-right:.5vw;
 	text-decoration:none;
 }
 body{
@@ -51,7 +54,6 @@ body{
 	background-size:100% 100%;
 	color:#fff;
 	font-family:"Philosopher";
-	font-size:1.5vw;
 	margin:0;
 	overflow:hidden;
 	text-align:center;
@@ -59,6 +61,7 @@ body{
 }
 footer{
 	bottom:0;
+	font-size:0;
 	height:2.5vw;
 	position:fixed;
 	transition:.2s;
