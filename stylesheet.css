@@ -30,16 +30,19 @@
 	100%{opacity:1;}
 }
 a:link{
-	color:#bbb;text-decoration:none;
+	color:#bbb;
 }
 a:visited{
-	color:#bbb;text-decoration:none;
+	color:#bbb;
 }
 a:hover{
-	color:#fff;text-decoration:none;
+	color:#fff;
 }
 a:active{
-	color:#bbb;text-decoration:none;
+	color:#bbb;
+}
+a{
+	text-decoration:none;
 }
 body{
 	-webkit-font-smoothing:antialiased;
