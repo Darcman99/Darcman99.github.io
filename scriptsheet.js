@@ -11,6 +11,7 @@ function keypress(event){
 	switch(code1){
 		case 32:
 		document.getElementById("footer").classList.toggle("hidefooter");
+		document.getElementById("percentage").classList.toggle("hidepercentage");
 		break;
 		case 65:
 		switch(code2){
@@ -137,12 +138,16 @@ function time(){
 navigator.getBattery().then(function(battery){
 	battery.addEventListener("levelchange",function(){
 		document.getElementById("charge").style.width=(battery.level*100)+"vw";
+		document.getElementById("percentage").innerHTML=(battery.level*100)+"%";
 	}
 	)
 	document.getElementById("charge").style.width=(battery.level*100)+"vw";
+	document.getElementById("percentage").innerHTML=(battery.level*100)+"%";
+	bat=battery;
 }
 )
 setInterval(time,1000);
 time();
+var bat="";
 var code2="";
 var code3="";

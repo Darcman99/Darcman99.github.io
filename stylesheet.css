@@ -23,7 +23,10 @@
 	width:40vw;
 }
 .hidefooter{
-	bottom:-2.5vw;
+	bottom:-4vh;
+}
+.hidepercentage{
+	left:-4vw;
 }
 @keyframes fadein{
 	0%{opacity:0;}
@@ -62,10 +65,18 @@ body{
 footer{
 	bottom:0;
 	font-size:0;
-	height:2.5vw;
+	height:4vh;
 	position:fixed;
 	transition:.2s;
 	width:100%;
+}
+header{
+	font-size:2vw;
+	left:0;
+	padding:0 0 0 .5vw;
+	position:fixed;
+	top:1.5vh;
+	transition:.2s;
 }
 table{
 	border-spacing:0;
