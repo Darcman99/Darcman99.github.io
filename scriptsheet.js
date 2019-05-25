@@ -138,11 +138,11 @@ function time(){
 navigator.getBattery().then(function(battery){
 	battery.addEventListener("levelchange",function(){
 		document.getElementById("charge").style.width=(battery.level*100)+"vw";
-		document.getElementById("percentage").innerHTML=(battery.level*100)+"%";
+		document.getElementById("percentage").innerHTML=(Math.round(battery.level*100))+"%";
 	}
 	)
 	document.getElementById("charge").style.width=(battery.level*100)+"vw";
-	document.getElementById("percentage").innerHTML=(battery.level*100)+"%";
+	document.getElementById("percentage").innerHTML=(Math.round(battery.level*100))+"%";
 	bat=battery;
 }
 )
