@@ -31,6 +31,13 @@ function keypress(event){
 			break;
 		}
 		break;
+		case 69:
+		switch(code2){
+			case 78:
+			localStorage.setItem("lastvisited","https://www.netflix.com/au");
+			window.open("https://www.netflix.com/au","_blank");
+			break;
+		}
 		case 70:
 		localStorage.setItem("lastvisited","https://www.facebook.com");
 		window.open("https://www.facebook.com","_blank");
@@ -54,11 +61,6 @@ function keypress(event){
 			window.open("https://www.gmail.com","_blank");
 			break;
 		}
-		break;
-			case 78:
-			localStorage.setItem("lastvisited","https://www.netflix.com/au");
-			window.open("https://www.netflix.com/au","_blank");
-			break;
 		case 83:
 		localStorage.setItem("lastvisited","https://store.steampowered.com");
 		window.open("https://store.steampowered.com","_blank");
