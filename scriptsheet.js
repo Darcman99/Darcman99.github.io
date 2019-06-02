@@ -61,6 +61,7 @@ function keypress(event){
 			window.open("https://www.gmail.com","_blank");
 			break;
 		}
+		break
 		case 83:
 		localStorage.setItem("lastvisited","https://store.steampowered.com");
 		window.open("https://store.steampowered.com","_blank");
