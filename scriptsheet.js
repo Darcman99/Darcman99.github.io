@@ -38,6 +38,7 @@ function keypress(event){
 			window.open("https://www.netflix.com/au","_blank");
 			break;
 		}
+		break;
 		case 70:
 		localStorage.setItem("lastvisited","https://www.facebook.com");
 		window.open("https://www.facebook.com","_blank");
