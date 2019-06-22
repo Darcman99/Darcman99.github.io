@@ -10,6 +10,7 @@ function keypress(event){
 	var code1=event.keyCode;
 	switch(code1){
 		case 32:
+		document.getElementById("button").classList.toggle("hidebutton");
 		document.getElementById("footer").classList.toggle("hidefooter");
 		document.getElementById("percentage").classList.toggle("hidepercentage");
 		break;

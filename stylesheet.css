@@ -22,6 +22,9 @@
 	padding:2vh;
 	width:40vw;
 }
+.hidebutton{
+	bottom:-6vh;
+}
 .hidefooter{
 	bottom:-4vh;
 }
@@ -61,6 +64,20 @@ body{
 	overflow:hidden;
 	text-align:center;
 	user-select:none;
+}
+button:hover{
+	color:#fff;
+}
+button{
+	background:none;
+	border:0;
+	bottom:-.6vh;
+	color:#bbb;
+	font-size:3vw;
+	outline:none;
+	position:fixed;
+	right:0;
+	transition:.2s;
 }
 footer{
 	bottom:0;
