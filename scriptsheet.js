@@ -1,6 +1,14 @@
 const ordinalSuffix=["st","nd","rd"];
 const addSuffix=n=>n+(ordinalSuffix[(n-1)%10]||"th");
 const numberToOrdinal=n=>"${n}".match(/1\d$/)?n+"th":addSuffix(n);
+function addbookmark(){
+	var title=prompt("Title: ","Google");
+	var url=prompt("URL: ","https://www."+title.toLowerCase()+".com");
+	if(title!=null||url!=null){
+		document.getElementById("footer").innerHTML+='<a id="'+title+'" href="'+url+`">`+title+"</a>";
+	}
+	document.getElementById("addbookmark").blur();
+}
 function date(){
 	var date=new Date();
 	var months=["January","February","March","April","May","June","July","August","September","October","November","December"];
@@ -10,9 +18,10 @@ function keypress(event){
 	var code1=event.keyCode;
 	switch(code1){
 		case 32:
-		document.getElementById("button").classList.toggle("hidebutton");
+		document.getElementById("addbookmark").classList.toggle("hidebutton");
 		document.getElementById("footer").classList.toggle("hidefooter");
 		document.getElementById("percentage").classList.toggle("hidepercentage");
+		document.getElementById("removebookmark").classList.toggle("hidebutton");
 		break;
 		case 65:
 		switch(code2){
@@ -84,6 +93,13 @@ function keypress(event){
 	code4=code3;
 	code3=code2;
 	code2=code1;
+}
+function removebookmark(){
+	var title=prompt("Title: ","Google");
+	if(title!=null){
+		document.getElementById(title).remove();
+	}
+	document.getElementById("removebookmark").blur();
 }
 function time(){
 	var time=new Date();
