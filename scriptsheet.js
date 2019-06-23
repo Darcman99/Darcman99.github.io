@@ -26,6 +26,7 @@ function addbookmark(){
 			switching=true;
 		}
 	}
+	localStorage.setItem("bookmarks",document.getElementById("footer").innerHTML);
 }
 function date(){
 	var date=new Date();
@@ -41,76 +42,7 @@ function keypress(event){
 		document.getElementById("percentage").classList.toggle("hidepercentage");
 		document.getElementById("removebookmark").classList.toggle("hidebutton");
 		break;
-		case 65:
-		switch(code2){
-			case 78:
-			localStorage.setItem("lastvisited","https://www.nab.com");
-			window.open("https://www.nab.com","_blank");
-			break;
-		}
-		break;
-		case 67:
-		switch(code2){
-			case 65:
-			break;
-			default:
-			localStorage.setItem("lastvisited","https://codepen.io");
-			window.open("https://codepen.io","_blank");
-			break;
-		}
-		break;
-		case 69:
-		switch(code2){
-			case 78:
-			localStorage.setItem("lastvisited","https://www.netflix.com/au");
-			window.open("https://www.netflix.com/au","_blank");
-			break;
-		}
-		break;
-		case 70:
-		localStorage.setItem("lastvisited","https://www.facebook.com");
-		window.open("https://www.facebook.com","_blank");
-		break;
-		case 73:
-		switch(code2){
-			case 71:
-			localStorage.setItem("lastvisited","https://github.com");
-			window.open("https://github.com","_blank");
-			break;
-		}
-		break;
-		case 75:
-		localStorage.setItem("lastvisited","https://keycode.info");
-		window.open("https://keycode.info","_blank");
-		break;
-		case 77:
-		switch(code2){
-			case 71:
-			localStorage.setItem("lastvisited","https://www.gmail.com");
-			window.open("https://www.gmail.com","_blank");
-			break;
-		}
-		break
-		case 83:
-		localStorage.setItem("lastvisited","https://store.steampowered.com");
-		window.open("https://store.steampowered.com","_blank");
-		break;
-		case 84:
-		localStorage.setItem("lastvisited","https://trello.com");
-		window.open("https://trello.com","_blank");
-		break;
-		break;
-		case 89:
-		localStorage.setItem("lastvisited","https://www.youtube.com");
-		window.open("https://www.youtube.com","_blank");
-		break;
-		case 8:
-			window.open(localStorage.getItem("lastvisited"),"_blank");
-		break;
 	}
-	code4=code3;
-	code3=code2;
-	code2=code1;
 }
 function removebookmark(){
 	var title=prompt("Title: ","Google");
@@ -118,6 +50,7 @@ function removebookmark(){
 		document.getElementById(title).remove();
 	}
 	document.getElementById("removebookmark").blur();
+	localStorage.setItem("bookmarks",document.getElementById("footer").innerHTML);
 }
 function time(){
 	var time=new Date();
@@ -156,6 +89,7 @@ navigator.getBattery().then(function(battery){
 	bat=battery;
 }
 )
+document.getElementById("footer").innerHTML=localStorage.getItem("bookmarks");
 setInterval(time,1000);
 time();
 var bat="";
