@@ -21,6 +21,12 @@
 #time{
 	font-size:14vh;
 }
+#uploadbackgroundlabel:hover{
+	color:#fff;
+}
+#uploadbackground{
+	display:none;
+}
 .main{
 	background-color:rgba(0,0,0,.6);
 	border-radius:17vh;
@@ -36,6 +42,9 @@
 }
 .hidepercentage{
 	left:-5vw;
+}
+.hideupload{
+	right:-5vw;
 }
 @keyframes fadein{
 	0%{opacity:0;}
@@ -63,7 +72,7 @@ body{
 	-webkit-font-smoothing:antialiased;
 	animation:fadein 1s;
 	background-image:url(assets/background.jpg);
-	background-size:100% 100%;
+	background-size:100%;
 	color:#fff;
 	font-family:"Philosopher";
 	margin:0;
@@ -98,6 +107,15 @@ header{
 	padding:0 0 0 .5vw;
 	position:fixed;
 	top:1.5vh;
+	transition:.2s;
+}
+label{
+	right:.2vw;
+	top:1vh;
+	color:#bbb;
+	font-size:2vw;
+	outline:none;
+	position:fixed;
 	transition:.2s;
 }
 table{

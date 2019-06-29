@@ -41,6 +41,7 @@ function keypress(event){
 		document.getElementById("footer").classList.toggle("hidefooter");
 		document.getElementById("percentage").classList.toggle("hidepercentage");
 		document.getElementById("removebookmark").classList.toggle("hidebutton");
+		document.getElementById("uploadbackgroundlabel").classList.toggle("hideupload");
 		break;
 	}
 }
@@ -89,6 +90,18 @@ navigator.getBattery().then(function(battery){
 	bat=battery;
 }
 )
+document.getElementById("uploadbackground").addEventListener('change',readURL,true);
+function readURL(){
+	var file=document.getElementById("uploadbackground").files[0];
+	var reader=new FileReader();
+	reader.onloadend=function(){
+		document.getElementById("body").style="background-image:url("+reader.result+")";        
+	}
+	if(file){
+		reader.readAsDataURL(file);
+	}
+	document.getElementById("uploadbackground").blur();
+}
 document.getElementById("footer").innerHTML=localStorage.getItem("bookmarks");
 setInterval(time,1000);
 time();
