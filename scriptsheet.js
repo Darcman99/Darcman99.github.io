@@ -1,6 +1,8 @@
-const ordinalSuffix=["st","nd","rd"];
 const addSuffix=n=>n+(ordinalSuffix[(n-1)%10]||"th");
 const numberToOrdinal=n=>"${n}".match(/1\d$/)?n+"th":addSuffix(n);
+const ordinalSuffix=["st","nd","rd"];
+document.getElementById("footer").innerHTML=localStorage.getItem("bookmarks");
+document.getElementById("uploadbackground").addEventListener('change',readURL,true);
 function addbookmark(){
 	var title=prompt("Title: ","Google");
 	var url=prompt("URL: ","https://www."+title.toLowerCase()+".com");
@@ -79,18 +81,6 @@ function time(){
 	date();
 	document.getElementById("time").innerHTML=halfhours+":"+minutes;
 }
-navigator.getBattery().then(function(battery){
-	battery.addEventListener("levelchange",function(){
-		document.getElementById("charge").style.width=(battery.level*100)+"vw";
-		document.getElementById("percentage").innerHTML=(Math.round(battery.level*100))+"%";
-	}
-	)
-	document.getElementById("charge").style.width=(battery.level*100)+"vw";
-	document.getElementById("percentage").innerHTML=(Math.round(battery.level*100))+"%";
-	bat=battery;
-}
-)
-document.getElementById("uploadbackground").addEventListener('change',readURL,true);
 function readURL(){
 	var file=document.getElementById("uploadbackground").files[0];
 	var reader=new FileReader();
@@ -102,7 +92,17 @@ function readURL(){
 	}
 	document.getElementById("uploadbackground").blur();
 }
-document.getElementById("footer").innerHTML=localStorage.getItem("bookmarks");
+navigator.getBattery().then(function(battery){
+	battery.addEventListener("levelchange",function(){
+		document.getElementById("charge").style.width=(battery.level*100)+"vw";
+		document.getElementById("percentage").innerHTML=(Math.round(battery.level*100))+"%";
+	}
+	)
+	document.getElementById("charge").style.width=(battery.level*100)+"vw";
+	document.getElementById("percentage").innerHTML=(Math.round(battery.level*100))+"%";
+	bat=battery;
+}
+)
 setInterval(time,1000);
 time();
 var bat="";
