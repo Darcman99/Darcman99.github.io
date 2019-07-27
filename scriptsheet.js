@@ -2,7 +2,6 @@ const addSuffix=n=>n+(ordinalSuffix[(n-1)%10]||"th");
 const numberToOrdinal=n=>"${n}".match(/1\d$/)?n+"th":addSuffix(n);
 const ordinalSuffix=["st","nd","rd"];
 document.getElementById("footer").innerHTML=localStorage.getItem("bookmarks");
-document.getElementById("uploadbackground").addEventListener('change',readURL,true);
 function addbookmark(){
 	var title=prompt("Title: ","Google");
 	var url=prompt("URL: ","https://www."+title.toLowerCase()+".com");
@@ -80,17 +79,6 @@ function time(){
 	}
 	date();
 	document.getElementById("time").innerHTML=halfhours+":"+minutes;
-}
-function readURL(){
-	var file=document.getElementById("uploadbackground").files[0];
-	var reader=new FileReader();
-	reader.onloadend=function(){
-		document.getElementById("body").style="background-image:url("+reader.result+")";        
-	}
-	if(file){
-		reader.readAsDataURL(file);
-	}
-	document.getElementById("uploadbackground").blur();
 }
 navigator.getBattery().then(function(battery){
 	battery.addEventListener("levelchange",function(){
