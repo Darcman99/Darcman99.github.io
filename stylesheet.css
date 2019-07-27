@@ -11,6 +11,7 @@
 	left:0;
 	position:absolute;
 	top:0;
+	z-index:2;
 }
 #date{
 	font-size:7vh;
@@ -21,6 +22,22 @@
 #time{
 	font-size:14vh;
 }
+.add{
+	border-radius:100% 0 0 0;
+	padding:.8vw .5vw .5vw 1.5vw;
+}
+.hidebody{
+	display:none;
+}
+.hidebutton{
+	bottom:-10vh;
+}
+.hidefooter{
+	bottom:-6vh;
+}
+.hidepercentage{
+	left:-8vw;
+}
 .main{
 	background-color:rgba(0,0,0,.6);
 	border-radius:17vh;
@@ -28,17 +45,9 @@
 	padding:2vh;
 	width:40vw;
 }
-.hidebody{
-	display:none;
-}
-.hidebutton{
-	bottom:-6vh;
-}
-.hidefooter{
-	bottom:-4vh;
-}
-.hidepercentage{
-	left:-5vw;
+.remove{
+	border-radius:0 100% 0 0;
+	padding:.8vw 1.5vw .5vw .5vw;
 }
 a:link{
 	color:#bbb;
@@ -63,7 +72,9 @@ body{
 	background-image:url("https://picsum.photos/1920/1080");
 	background-size:100%;
 	color:#fff;
+	display:flex;
 	font-family:"Philosopher";
+	justify-content:center;
 	margin:0;
 	overflow:hidden;
 	text-align:center;
@@ -73,30 +84,35 @@ button:hover{
 	color:#fff;
 }
 button{
-	background:none;
+	background-color:rgba(0,0,0,.5);
 	border:0;
 	bottom:-.6vh;
 	color:#bbb;
 	font-size:3vw;
 	outline:none;
 	position:fixed;
-	transition:.2s;
+	transition:.4s;
 }
 footer{
+	background-color:rgba(0,0,0,.5);
+	border-radius:4vw 4vw 0 0;
 	bottom:0;
 	font-size:0;
 	height:4vh;
+	padding:1vw 2vw 0 2vw;
 	position:fixed;
-	transition:.2s;
-	width:100%;
+	transition:.4s;
 }
 header{
+	background-color:rgba(0,0,0,.5);
+	border-radius:0 0 100% 0;
 	font-size:2vw;
 	left:0;
-	padding:0 0 0 .5vw;
-	position:fixed;
-	top:1.5vh;
-	transition:.2s;
+	padding:1.1vw 3vw 2vw 1vw;
+	position:absolute;
+	top:0;
+	transition:.4s;
+	z-index:1;
 }
 table{
 	border-spacing:0;
