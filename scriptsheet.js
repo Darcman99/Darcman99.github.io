@@ -1,6 +1,3 @@
-const addSuffix=n=>n+(ordinalSuffix[(n-1)%10]||"th");
-const numberToOrdinal=n=>"${n}".match(/1\d$/)?n+"th":addSuffix(n);
-const ordinalSuffix=["st","nd","rd"];
 document.getElementById("footer").innerHTML=localStorage.getItem("bookmarks");
 function addbookmark(){
 	var title=prompt("Title: ","Google");
@@ -32,7 +29,12 @@ function addbookmark(){
 function date(){
 	var date=new Date();
 	var months=["January","February","March","April","May","June","July","August","September","October","November","December"];
-	document.getElementById("date").innerHTML=months[date.getMonth()]+"&nbsp;"+numberToOrdinal(date.getDate())+",&nbsp;"+date.getFullYear();
+	document.getElementById("date").innerHTML=months[date.getMonth()]+"&nbsp;"+getNumberWithOrdinal(date.getDate())+",&nbsp;"+date.getFullYear();
+}
+function getNumberWithOrdinal(n){
+	var s=["th","st","nd","rd"],
+	v=n%100;
+	return n+(s[(v-20)%10]||s[v]||s[0]);
 }
 function keypress(event){
 	var code1=event.keyCode;
