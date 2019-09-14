@@ -8,29 +8,15 @@
 		<title>Home</title>
 	</head>
 	<body oncontextmenu="return false" onkeydown="keypress(event)" id="body">
-		<table>
-			<tr>
-				<td colspan="3">
-					<div id="charge"></div>
-					<header id="percentage" class="hidepercentage"></header>
-				</td>
-			</tr>
-			<tr>
-				<th></th>
-				<th class="main">
-					<div>
-						<span id="time"></span>
-						<span id="ampm"></span>
-					</div>
-					<br>
-					<div id="date"></div>
-				</th>
-				<th></th>
-			</tr>
-			<tr></tr>
-		</table>
-		<footer id="footer" class="hidefooter"></footer>
+		<div id="charge"></div>
+		<header id="percentage" class="hidepercentage"></header>
+		<div class="time">
+			<div id="date"></div>
+			<span id="time"></span>
+			<span id="ampm"></span>
+		</div>
 		<button id="addbookmark" class="hidebutton add" onclick="addbookmark()">&oplus;</button>
+		<footer id="footer" class="hidefooter"></footer>
 		<button id="removebookmark" class="hidebutton remove" onclick="removebookmark()">&ominus;</button>
 	</body>
 	<script type="text/javascript" src="scriptsheet.js"></script>
