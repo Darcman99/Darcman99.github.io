@@ -46,6 +46,9 @@ function keypress(event){
 		document.getElementById("removebookmark").classList.toggle("hidebutton");
 		document.getElementById("uploadbackgroundlabel").classList.toggle("hideupload");
 		break;
+		case 9:
+		location.reload();
+		break;
 	}
 }
 function removebookmark(){
