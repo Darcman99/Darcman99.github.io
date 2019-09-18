@@ -1,3 +1,7 @@
+var armyhours=-1;
+var bat="";
+var code2="";
+var code3="";
 document.getElementById("footer").innerHTML=localStorage.getItem("bookmarks");
 function addbookmark(){
 	var title=prompt("Title: ","Google");
@@ -25,6 +29,10 @@ function addbookmark(){
 		}
 	}
 	localStorage.setItem("bookmarks",document.getElementById("footer").innerHTML);
+}
+function armytime(){
+	armyhours=armyhours*-1;
+	time();
 }
 function date(){
 	var date=new Date();
@@ -64,26 +72,38 @@ function time(){
 	var minutes=time.getMinutes();
 	var hours=time.getHours();
 	var halfhours=hours;
-	if(halfhours>12){
-		halfhours=hours-12;
-	}
-	else if(hours===0){
-		halfhours=12;
-	}
-	if(minutes<10){
-		minutes="0"+minutes;
-	}
-	else{
-		minutes=minutes;
-	}
-	if(hours<12){
-		document.getElementById("ampm").innerHTML="AM";
-	}
-	else{
-		document.getElementById("ampm").innerHTML="PM";
-	}
 	date();
-	document.getElementById("time").innerHTML=halfhours+":"+minutes;
+	if(armyhours<0){
+		if(halfhours>12){
+			halfhours=hours-12;
+		}
+		else if(hours===0){
+			halfhours=12;
+		}
+		if(minutes<10){
+			minutes="0"+minutes;
+		}
+		else{
+			minutes=minutes;
+		}
+		if(hours<12){
+			document.getElementById("ampm").innerHTML="AM";
+		}
+		else{
+			document.getElementById("ampm").innerHTML="PM";
+		}
+		document.getElementById("time").innerHTML=halfhours+":"+minutes;
+	}
+	else{
+		if(minutes<10){
+			minutes="0"+minutes;
+		}
+		else{
+			minutes=minutes;
+		}
+		document.getElementById("ampm").innerHTML="";
+		document.getElementById("time").innerHTML=hours+":"+minutes;
+	}
 }
 navigator.getBattery().then(function(battery){
 	battery.addEventListener("levelchange",function(){
@@ -98,6 +118,3 @@ navigator.getBattery().then(function(battery){
 )
 setInterval(time,1000);
 time();
-var bat="";
-var code2="";
-var code3="";
