@@ -34,11 +34,6 @@ function armytime(){
 	armyhours=armyhours*-1;
 	time();
 }
-function date(){
-	var date=new Date();
-	var months=["January","February","March","April","May","June","July","August","September","October","November","December"];
-	document.getElementById("date").innerHTML=months[date.getMonth()]+"&nbsp;"+getNumberWithOrdinal(date.getDate())+",&nbsp;"+date.getFullYear();
-}
 function getNumberWithOrdinal(n){
 	var s=["th","st","nd","rd"],
 	v=n%100;
@@ -72,7 +67,9 @@ function time(){
 	var minutes=time.getMinutes();
 	var hours=time.getHours();
 	var halfhours=hours;
-	date();
+	var date=new Date();
+	var months=["January","February","March","April","May","June","July","August","September","October","November","December"];
+	document.getElementById("date").innerHTML=months[date.getMonth()]+"&nbsp;"+getNumberWithOrdinal(date.getDate())+",&nbsp;"+date.getFullYear();
 	if(armyhours<0){
 		if(halfhours>12){
 			halfhours=hours-12;
