@@ -1,15 +1,15 @@
-var armyhours=-1;
+var armyHours=-1;
 var bat="";
 var code2="";
 var code3="";
 document.getElementById("footer").innerHTML=localStorage.getItem("bookmarks");
-function addbookmark(){
+function addBookmark(){
 	var title=prompt("Title: ","Google");
 	var url=prompt("URL: ","https://www."+title.toLowerCase()+".com");
 	if(title!=null||url!=null){
 		document.getElementById("footer").innerHTML+='<a id="'+title+'" href="'+url+`">`+title+"</a>";
 	}
-	document.getElementById("addbookmark").blur();
+	document.getElementById("addBookmark").blur();
 	var list,i,switching,b,shouldSwitch;
 	list=document.getElementById("footer");
 	switching=true;
@@ -30,8 +30,8 @@ function addbookmark(){
 	}
 	localStorage.setItem("bookmarks",document.getElementById("footer").innerHTML);
 }
-function armytime(){
-	armyhours=armyhours*-1;
+function armyTime(){
+	armyHours=armyHours*-1;
 	time();
 }
 function getNumberWithOrdinal(n){
@@ -43,11 +43,11 @@ function keypress(event){
 	var code1=event.keyCode;
 	switch(code1){
 		case 32:
-		document.getElementById("addbookmark").classList.toggle("hidebutton");
-		document.getElementById("footer").classList.toggle("hidefooter");
-		document.getElementById("percentage").classList.toggle("hidepercentage");
-		document.getElementById("removebookmark").classList.toggle("hidebutton");
-		document.getElementById("uploadbackgroundlabel").classList.toggle("hideupload");
+		document.getElementById("addBookmark").classList.toggle("hideButton");
+		document.getElementById("footer").classList.toggle("hideFooter");
+		document.getElementById("percentage").classList.toggle("hidePercentage");
+		document.getElementById("removeBookmark").classList.toggle("hideButton");
+		document.getElementById("uploadBackgroundLabel").classList.toggle("hideUpload");
 		break;
 		case 9:
 		location.reload();
@@ -59,23 +59,23 @@ function removebookmark(){
 	if(title!=null){
 		document.getElementById(title).remove();
 	}
-	document.getElementById("removebookmark").blur();
+	document.getElementById("removeBookmark").blur();
 	localStorage.setItem("bookmarks",document.getElementById("footer").innerHTML);
 }
 function time(){
 	var time=new Date();
 	var minutes=time.getMinutes();
 	var hours=time.getHours();
-	var halfhours=hours;
+	var halfHours=hours;
 	var date=new Date();
 	var months=["January","February","March","April","May","June","July","August","September","October","November","December"];
 	document.getElementById("date").innerHTML=months[date.getMonth()]+"&nbsp;"+getNumberWithOrdinal(date.getDate())+",&nbsp;"+date.getFullYear();
-	if(armyhours<0){
-		if(halfhours>12){
-			halfhours=hours-12;
+	if(armyHours<0){
+		if(halfHours>12){
+			halfHours=hours-12;
 		}
 		else if(hours===0){
-			halfhours=12;
+			halfHours=12;
 		}
 		if(minutes<10){
 			minutes="0"+minutes;
@@ -89,7 +89,7 @@ function time(){
 		else{
 			document.getElementById("ampm").innerHTML="PM";
 		}
-		document.getElementById("time").innerHTML=halfhours+":"+minutes;
+		document.getElementById("time").innerHTML=halfHours+":"+minutes;
 	}
 	else{
 		if(minutes<10){
@@ -103,7 +103,7 @@ function time(){
 	}
 }
 navigator.getBattery().then(function(battery){
-	battery.addEventListener("levelchange",function(){
+	battery.addEventListener("levelChange",function(){
 		document.getElementById("charge").style.width=(battery.level*100)+"vw";
 		document.getElementById("percentage").innerHTML=(Math.round(battery.level*100))+"%";
 	}
