@@ -47,7 +47,6 @@ function keypress(event){
 		document.getElementById("footer").classList.toggle("hideFooter");
 		document.getElementById("percentage").classList.toggle("hidePercentage");
 		document.getElementById("removeBookmark").classList.toggle("hideButton");
-		document.getElementById("uploadBackgroundLabel").classList.toggle("hideUpload");
 		break;
 		case 9:
 		location.reload();
