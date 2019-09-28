@@ -102,7 +102,7 @@ function time(){
 	}
 }
 navigator.getBattery().then(function(battery){
-	battery.addEventListener("levelChange",function(){
+	battery.addEventListener("levelchange",function(){
 		document.getElementById("charge").style.width=(battery.level*100)+"vw";
 		document.getElementById("percentage").innerHTML=(Math.round(battery.level*100))+"%";
 	}
