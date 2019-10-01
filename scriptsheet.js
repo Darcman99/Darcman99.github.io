@@ -39,7 +39,7 @@ function getNumberWithOrdinal(n){
 	v=n%100;
 	return n+(s[(v-20)%10]||s[v]||s[0]);
 }
-function keypress(event){
+function keyPress(event){
 	var code1=event.keyCode;
 	switch(code1){
 		case 32:
@@ -53,7 +53,7 @@ function keypress(event){
 		break;
 	}
 }
-function removebookmark(){
+function removeBookmark(){
 	var title=prompt("Title: ","Google");
 	if(title!=null){
 		document.getElementById(title).remove();
