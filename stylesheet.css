@@ -29,11 +29,11 @@
 .hideBody{
 	display:none;
 }
+.hideBookmarks{
+	bottom:-6vh;
+}
 .hideButton{
 	bottom:-10vh;
-}
-.hideFooter{
-	bottom:-6vh;
 }
 .hidePercentage{
 	right:-10vw;

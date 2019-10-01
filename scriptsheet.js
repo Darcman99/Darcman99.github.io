@@ -2,16 +2,16 @@ var armyHours=-1;
 var bat="";
 var code2="";
 var code3="";
-document.getElementById("footer").innerHTML=localStorage.getItem("bookmarks");
+document.getElementById("bookmarks").innerHTML=localStorage.getItem("bookmarks");
 function addBookmark(){
 	var title=prompt("Title: ","Google");
 	var url=prompt("URL: ","https://www."+title.toLowerCase()+".com");
 	if(title!=null||url!=null){
-		document.getElementById("footer").innerHTML+='<a id="'+title+'" href="'+url+`">`+title+"</a>";
+		document.getElementById("bookmarks").innerHTML+='<a id="'+title+'" href="'+url+`">`+title+"</a>";
 	}
 	document.getElementById("addBookmark").blur();
 	var list,i,switching,b,shouldSwitch;
-	list=document.getElementById("footer");
+	list=document.getElementById("bookmarks");
 	switching=true;
 	while(switching){
 		switching=false;
@@ -28,7 +28,7 @@ function addBookmark(){
 			switching=true;
 		}
 	}
-	localStorage.setItem("bookmarks",document.getElementById("footer").innerHTML);
+	localStorage.setItem("bookmarks",document.getElementById("bookmarks").innerHTML);
 }
 function armyTime(){
 	armyHours=armyHours*-1;
@@ -44,7 +44,7 @@ function keyPress(event){
 	switch(code1){
 		case 32:
 		document.getElementById("addBookmark").classList.toggle("hideButton");
-		document.getElementById("footer").classList.toggle("hideFooter");
+		document.getElementById("bookmarks").classList.toggle("hideBookmarks");
 		document.getElementById("percentage").classList.toggle("hidePercentage");
 		document.getElementById("removeBookmark").classList.toggle("hideButton");
 		break;
@@ -59,7 +59,7 @@ function removeBookmark(){
 		document.getElementById(title).remove();
 	}
 	document.getElementById("removeBookmark").blur();
-	localStorage.setItem("bookmarks",document.getElementById("footer").innerHTML);
+	localStorage.setItem("bookmarks",document.getElementById("bookmarks").innerHTML);
 }
 function time(){
 	var time=new Date();
