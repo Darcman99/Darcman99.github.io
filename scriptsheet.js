@@ -5,7 +5,7 @@ var code3="";
 document.getElementById("bookmarks").innerHTML=localStorage.getItem("bookmarks");
 function addBookmark(){
 	var title=prompt("Title: ","Google");
-	var url=prompt("URL: ","https://www."+title.tolowercase()+".com");
+	var url=prompt("URL: ","https://www."+title.toLowerCase()+".com");
 	if(title!=null||url!=null){
 		document.getElementById("bookmarks").innerHTML+='<a id="'+title+'" href="'+url+`">`+title+"</a>";
 	}
