@@ -1,14 +1,11 @@
 var armyHours=-1;
 var bat="";
-var code2="";
-var code3="";
 document.getElementById("bookmarks").innerHTML=localStorage.getItem("bookmarks");
 function addBookmark(){
 	var title=prompt("Title: ","Google");
 	var url=prompt("URL: ","https://www."+title.toLowerCase()+".com");
-	if(title!=null||url!=null){
-		document.getElementById("bookmarks").innerHTML+='<a id="'+title+'" href="'+url+`">`+title+"</a>";
-	}
+	if(title!=null||url!=null)
+		{document.getElementById("bookmarks").innerHTML+='<a id="'+title+'" href="'+url+`">`+title+"</a>";}
 	document.getElementById("addBookmark").blur();
 	var list,i,switching,b,shouldSwitch;
 	list=document.getElementById("bookmarks");
@@ -40,24 +37,19 @@ function getNumberWithOrdinal(n){
 	return n+(s[(v-20)%10]||s[v]||s[0]);
 }
 function keyPress(event){
-	var code1=event.keyCode;
-	switch(code1){
-		case 32:
+	if(event.keyCode==32){
 		document.getElementById("addBookmark").classList.toggle("hideButton");
 		document.getElementById("bookmarks").classList.toggle("hideBookmarks");
 		document.getElementById("percentage").classList.toggle("hidePercentage");
 		document.getElementById("removeBookmark").classList.toggle("hideButton");
-		break;
-		case 9:
-		location.reload();
-		break;
 	}
+	else if(event.keyCode==9)
+		{location.reload();}
 }
 function removeBookmark(){
 	var title=prompt("Title: ","Google");
-	if(title!=null){
-		document.getElementById(title).remove();
-	}
+	if(title!=null)
+		{document.getElementById(title).remove();}
 	document.getElementById("removeBookmark").blur();
 	localStorage.setItem("bookmarks",document.getElementById("bookmarks").innerHTML);
 }
@@ -70,33 +62,25 @@ function time(){
 	var months=["January","February","March","April","May","June","July","August","September","October","November","December"];
 	document.getElementById("date").innerHTML=months[date.getMonth()]+"&nbsp;"+getNumberWithOrdinal(date.getDate())+",&nbsp;"+date.getFullYear();
 	if(armyHours<0){
-		if(halfHours>12){
-			halfHours=hours-12;
-		}
-		else if(hours===0){
-			halfHours=12;
-		}
-		if(minutes<10){
-			minutes="0"+minutes;
-		}
-		else{
-			minutes=minutes;
-		}
-		if(hours<12){
-			document.getElementById("ampm").innerHTML="AM";
-		}
-		else{
-			document.getElementById("ampm").innerHTML="PM";
-		}
+		if(halfHours>12)
+			{halfHours=hours-12;}
+		else if(hours===0)
+			{halfHours=12;}
+		if(minutes<10)
+			{minutes="0"+minutes;}
+		else
+			{minutes=minutes;}
+		if(hours<12)
+			{document.getElementById("ampm").innerHTML="AM";}
+		else
+			{document.getElementById("ampm").innerHTML="PM";}
 		document.getElementById("time").innerHTML=halfHours+":"+minutes;
 	}
 	else{
-		if(minutes<10){
-			minutes="0"+minutes;
-		}
-		else{
-			minutes=minutes;
-		}
+		if(minutes<10)
+			{minutes="0"+minutes;}
+		else
+			{minutes=minutes;}
 		document.getElementById("ampm").innerHTML="";
 		document.getElementById("time").innerHTML=hours+":"+minutes;
 	}
